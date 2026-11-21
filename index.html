@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chase Builds</title>
+<meta name="description" content="Small Python tools for messy business data: spreadsheets, PDFs, customer lists and weekly reports.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="room" aria-hidden="true"><i class="panel"></i><i class="shelf"></i><i class="window"></i><i class="sheet"></i><i class="sofa"></i><i class="plant"></i><i class="table"></i></div>
+
+<div class="app">
+  <header class="bar glass">
+    <a class="brand" href="#top"><b>CB</b><span>Chase Builds</span></a>
+    <nav aria-label="Sections">
+      <a href="#tools">Tools</a>
+      <a href="#how">How I work</a>
+      <a href="#services">Services</a>
+    </nav>
+  </header>
+
+  <main id="top" class="main">
+    <section class="stage glass hero">
+      <h1>Chase Builds</h1>
+      <p class="lead">Small Python tools for messy business data: spreadsheets, PDFs, customer lists and weekly reports.</p>
+      <p class="second">Each tool is scored against generated test data where the right answer is known. When a tool is not sure, it sends the value to a review sheet instead of guessing.</p>
+      <div class="btns">
+        <a class="btn primary" href="https://github.com/chasebuilds">See the code</a>
+        <a class="btn" href="https://www.upwork.com/freelancers/~0107f20574d26eac0e">Hire on Upwork</a>
+      </div>
+    </section>
+
+    <section class="stage glass" id="tools">
+      <h2>Tools</h2>
+      <p class="sub">Each card shows a before and after. Tap an image to open it full size.</p>
+      <div class="tools">
+
+        <article class="card tool">
+          <a class="shot" href="img/pdf-to-excel.webp" target="_blank" rel="noopener"><img src="img/pdf-to-excel-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="pdf-to-excel: an invoice PDF on the left, the extracted fields with confidence scores on the right"></a>
+          <div class="body">
+            <h3>pdf-to-excel</h3>
+            <p>Invoice PDFs to one Excel workbook, with a confidence score on every field.</p>
+            <p class="result"><span>Measured</span>3,600 of 3,600 fields correct on 400 invoices in 10 layouts.</p>
+            <div class="links"><a href="https://github.com/chasebuilds/pdf-to-excel">Repo</a><a href="https://github.com/chasebuilds/pdf-to-excel/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
+          </div>
+        </article>
+
+        <article class="card tool">
+          <a class="shot" href="img/excel-cleaner-pro.webp" target="_blank" rel="noopener"><img src="img/excel-cleaner-pro-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="excel-cleaner-pro: a messy spreadsheet before and the cleaned version after"></a>
+          <div class="body">
+            <h3>excel-cleaner-pro</h3>
+            <p>Cleans messy CSV and Excel files and logs every change on an audit sheet.</p>
+            <p class="result"><span>Measured</span>5,615 of 5,627 fixable errors fixed, 611 of 611 unsafe values flagged.</p>
+            <div class="links"><a href="https://github.com/chasebuilds/excel-cleaner-pro">Repo</a><a href="https://github.com/chasebuilds/excel-cleaner-pro/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
+          </div>
+        </article>
+
+        <article class="card tool">
+          <a class="shot" href="img/data-merger.webp" target="_blank" rel="noopener"><img src="img/data-merger-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="data-merger: several customer lists before and one merged list after"></a>
+          <div class="body">
+            <h3>data-merger</h3>
+            <p>Merges customer lists with different columns into one record per customer.</p>
+            <p class="result"><span>Measured</span>28,512 rows from 5 files with 0 false merges.</p>
+            <div class="links"><a href="https://github.com/chasebuilds/data-merger">Repo</a><a href="https://github.com/chasebuilds/data-merger/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
+          </div>
+        </article>
+
+        <article class="card tool">
+          <a class="shot" href="img/automated-reporting.webp" target="_blank" rel="noopener"><img src="img/automated-reporting-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="automated-reporting-system: raw weekly exports before and the finished report after"></a>
+          <div class="body">
+            <h3>automated-reporting-system</h3>
+            <p>Raw weekly exports to a finished Excel report and HTML dashboard.</p>
+            <p class="result"><span>Measured</span>876 of 876 KPI values exact, 17 of 18 planted faults caught.</p>
+            <div class="links"><a href="https://github.com/chasebuilds/automated-reporting-system">Repo</a><a href="https://github.com/chasebuilds/automated-reporting-system/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
+          </div>
+        </article>
+
+        <article class="card tool">
+          <a class="shot" href="img/business-research.webp" target="_blank" rel="noopener"><img src="img/business-research-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="business-research-tool: a list of company names before and a sourced research sheet after"></a>
+          <div class="body">
+            <h3>business-research-tool</h3>
+            <p>Company names to a research sheet where every fact has a source.</p>
+            <p class="result"><span>Measured</span>99.4% match precision on 300 test companies.</p>
+            <div class="links"><a href="https://github.com/chasebuilds/business-research-tool">Repo</a><a href="https://github.com/chasebuilds/business-research-tool/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
+          </div>
+        </article>
+
+        <article class="card tool">
+          <a class="shot" href="img/web-data-extractor.webp" target="_blank" rel="noopener"><img src="img/web-data-extractor-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="web-data-extractor: a public catalog page before and a checked spreadsheet after"></a>
+          <div class="body">
+            <h3>web-data-extractor</h3>
+            <p>Public catalog pages to a checked spreadsheet, only where robots.txt allows.</p>
+            <p class="result"><span>Measured</span>360 of 360 field values correct on the test site.</p>
+            <div class="links"><a href="https://github.com/chasebuilds/web-data-extractor">Repo</a><a href="https://github.com/chasebuilds/web-data-extractor/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="stage glass" id="how">
+      <h2>How I work</h2>
+      <p class="sub">The same four rules apply to every tool.</p>
+      <ol class="points">
+        <li class="card"><b>Audit sheet</b>Every change the tool makes is listed on an audit sheet.</li>
+        <li class="card"><b>Review sheet</b>Anything the tool is not sure about goes to a review sheet for a person to check.</li>
+        <li class="card"><b>Repeatable</b>The same input always gives the same output.</li>
+        <li class="card"><b>Measured</b>Results are measured on synthetic data, with the method and limits published in each repo (<code>BENCHMARK.md</code> and <code>LIMITATIONS.md</code>).</li>
+      </ol>
+    </section>
+
+    <section class="stage glass" id="services">
+      <h2>Services</h2>
+      <p class="sub">Work I take on.</p>
+      <ul class="services">
+        <li class="card">Excel and CSV cleanup</li>
+        <li class="card">PDF to Excel</li>
+        <li class="card">File merging</li>
+        <li class="card">Weekly report automation</li>
+        <li class="card">Lists from public data (only where sites allow it)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="glass">All results are on synthetic data. Chase Builds.</footer>
+</div>
+</body>
+</html>
