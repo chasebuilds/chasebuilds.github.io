@@ -1,0 +1,105 @@
+:root {
+  --wall: #cdb9a3; --wall-2: #e9ddcf; --wood: #6b4a33; --wood-2: #8a6447; --floor: #b89a80; --glow: #fff6e6; --leaf: #6f7f52; --sofa-1: #4a3a30; --sofa-2: #2c221c;
+  --ink: #2a2019; --ink-2: rgba(42, 32, 25, .7); --ink-3: rgba(42, 32, 25, .45);
+  --glass: rgba(255, 250, 244, .22); --glass-edge: rgba(255, 255, 255, .55); --card: rgba(255, 252, 248, .58); --card-hi: rgba(255, 255, 255, .8);
+  --shadow: rgba(70, 40, 20, .22);
+  --me: #c94a2e; --good: #1a7f5f; --good-bg: rgba(31, 154, 114, .14);
+  --solid: #2a2019; --solid-fg: #fbf5ee;
+  --f-ui: "Onest", "Segoe UI", system-ui, sans-serif; --f-num: "Geist Mono", ui-monospace, "Cascadia Mono", monospace;
+  --r-lg: 28px; --r-md: 18px; --r-pill: 999px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root {
+  --wall: #2a1f19; --wall-2: #3b2c22; --wood: #1d140e; --wood-2: #33241a; --floor: #241a14; --glow: #ffb867; --leaf: #2f3a24;
+  --ink: #f6ece2; --ink-2: rgba(246, 236, 226, .72); --ink-3: rgba(246, 236, 226, .45);
+  --glass: rgba(34, 24, 18, .34); --glass-edge: rgba(255, 255, 255, .14); --card: rgba(48, 36, 28, .6); --card-hi: rgba(70, 54, 42, .8);
+  --shadow: rgba(0, 0, 0, .45); --me: #ff7a55; --good: #4fd1a1; --good-bg: rgba(79, 209, 161, .14);
+  --solid: #f6ece2; --solid-fg: #2a2019; color-scheme: dark } }
+
+* { box-sizing: border-box }
+html { scroll-behavior: smooth; scroll-padding-top: 84px }
+body { margin: 0; background: var(--wall); color: var(--ink); font-family: var(--f-ui); font-size: 15px; line-height: 1.55; -webkit-font-smoothing: antialiased; overflow-x: hidden }
+a { color: inherit }
+img { display: block; max-width: 100%; height: auto }
+.num { font-family: var(--f-num); font-variant-numeric: tabular-nums; letter-spacing: -.02em }
+
+/* Painted warm room behind the glass */
+.room { position: fixed; inset: 0; z-index: 0; overflow: hidden;
+  background: radial-gradient(60% 50% at 78% 18%, var(--glow), transparent 70%), linear-gradient(180deg, var(--wall-2) 0%, var(--wall) 62%, var(--floor) 62.2%, var(--floor) 100%) }
+.room i { position: absolute; display: block }
+.room .panel { left: 0; top: 0; width: 13%; height: 70%; background: repeating-linear-gradient(90deg, var(--wood) 0 18px, var(--wood-2) 18px 22px) }
+.room .shelf { right: 6%; top: 8%; width: 30%; height: 46%; border-radius: 6px; background: linear-gradient(180deg, var(--wood-2), var(--wood)); box-shadow: inset 0 -14px 0 rgba(0,0,0,.18) }
+.room .window { right: 9%; top: 11%; width: 24%; height: 34%; border-radius: 4px; background: linear-gradient(160deg, var(--glow), var(--wall-2)); opacity: .9 }
+.room .sheet { left: 22%; top: 12%; width: 18%; height: 30%; border-radius: 4px; opacity: .55;
+  background: repeating-linear-gradient(0deg, transparent 0 15px, var(--wood-2) 15px 16px), repeating-linear-gradient(90deg, transparent 0 46px, var(--wood-2) 46px 47px), var(--wall-2) }
+.room .sofa { left: -4%; bottom: 8%; width: 34%; height: 22%; border-radius: 40px 40px 12px 12px; background: linear-gradient(180deg, var(--sofa-1), var(--sofa-2)) }
+.room .plant { right: 2%; bottom: 14%; width: 120px; height: 240px; border-radius: 60px 60px 20px 20px; background: radial-gradient(ellipse at 50% 30%, var(--leaf), transparent 70%) }
+.room .table { left: 40%; bottom: 4%; width: 26%; height: 9%; border-radius: 50%; background: radial-gradient(ellipse, var(--wood-2), var(--wood) 70%, transparent 72%) }
+
+.glass { background: var(--glass); -webkit-backdrop-filter: blur(26px) saturate(150%); backdrop-filter: blur(26px) saturate(150%);
+  border: 1px solid var(--glass-edge); box-shadow: inset 0 1px 0 var(--glass-edge), 0 24px 60px -20px var(--shadow) }
+.card { background: var(--card); border: 1px solid var(--glass-edge); border-radius: var(--r-md); box-shadow: inset 0 1px 0 var(--glass-edge);
+  transition: transform .25s cubic-bezier(.2,.8,.2,1), background .25s }
+.card:hover { transform: translateY(-4px); background: var(--card-hi) }
+
+.app { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) 40px max(16px, env(safe-area-inset-left, 0px)) }
+
+/* Pill nav */
+.bar { position: sticky; top: 12px; z-index: 5; display: flex; align-items: center; gap: 10px; padding: 7px 8px; border-radius: var(--r-pill) }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 14px; white-space: nowrap; text-decoration: none; padding-right: 6px }
+.brand b { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; background: var(--solid); color: var(--solid-fg); font-size: 11px; letter-spacing: .04em }
+.bar nav { margin-left: auto; display: flex; gap: 2px; min-width: 0 }
+.bar nav a { font-size: 13px; font-weight: 500; color: var(--ink-2); text-decoration: none; padding: 8px 13px; border-radius: var(--r-pill); white-space: nowrap; transition: background .2s, color .2s }
+.bar nav a:hover { color: var(--ink); background: var(--card-hi) }
+
+.stage { border-radius: var(--r-lg); padding: clamp(20px, 3.2vw, 36px) }
+.stage > h2 { margin: 0 0 4px; font-size: clamp(20px, 2.6vw, 26px); font-weight: 600; letter-spacing: -.02em }
+.stage > .sub { margin: 0 0 20px; color: var(--ink-2); max-width: 66ch }
+
+/* Hero */
+.hero h1 { margin: 0 0 12px; font-size: clamp(34px, 6vw, 58px); font-weight: 700; letter-spacing: -.035em; line-height: 1.05 }
+.hero .lead { margin: 0 0 10px; font-size: clamp(17px, 2.1vw, 21px); font-weight: 500; max-width: 46ch; text-wrap: pretty }
+.hero .second { margin: 0 0 24px; color: var(--ink-2); max-width: 62ch; text-wrap: pretty }
+.btns { display: flex; flex-wrap: wrap; gap: 10px }
+.btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 14px; text-decoration: none; padding: 12px 20px; border-radius: var(--r-pill);
+  border: 1px solid var(--glass-edge); background: var(--card-hi); color: var(--ink); transition: transform .2s, box-shadow .2s }
+.btn.primary { background: var(--solid); color: var(--solid-fg); border-color: transparent }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -10px var(--shadow) }
+
+/* Tool cards */
+.tools { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 16px }
+.tool { display: flex; flex-direction: column; overflow: hidden; min-width: 0 }
+.tool .shot { display: block; aspect-ratio: 16 / 10; background: var(--card-hi); border-bottom: 1px solid var(--glass-edge) }
+.tool .shot img { width: 100%; height: 100%; object-fit: cover }
+.tool .body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1 }
+.tool h3 { margin: 0; font-family: var(--f-num); font-size: 15px; font-weight: 500; letter-spacing: -.01em; overflow-wrap: anywhere }
+.tool p { margin: 0; color: var(--ink-2); font-size: 14px }
+.result { margin-top: 2px; padding: 10px 12px; border-radius: 12px; background: var(--good-bg); color: var(--ink); font-size: 13.5px; line-height: 1.45 }
+.result span { display: block; font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--good); margin-bottom: 2px }
+.links { margin-top: auto; padding-top: 6px; display: flex; flex-wrap: wrap; gap: 8px }
+.links a { font-size: 12.5px; font-weight: 500; text-decoration: none; padding: 6px 12px; border-radius: var(--r-pill); background: var(--card-hi); border: 1px solid var(--glass-edge); white-space: nowrap }
+.links a:hover { color: var(--me) }
+
+/* How I work + services */
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 16px }
+.points { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px; counter-reset: s }
+.points li { padding: 14px 16px; font-size: 14px; line-height: 1.5 }
+.points li::before { counter-increment: s; content: counter(s); font-family: var(--f-num); font-size: 12px; color: var(--me); display: block; margin-bottom: 4px }
+.points b { display: block; font-weight: 600; margin-bottom: 2px }
+.points code { font-family: var(--f-num); font-size: 12.5px }
+.services { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px }
+.services li { padding: 10px 16px; border-radius: var(--r-pill); font-size: 14px; font-weight: 500 }
+.services li:hover { transform: translateY(-2px) }
+
+footer { text-align: center; padding: 14px 18px; border-radius: var(--r-pill); font-size: 13px; color: var(--ink-2) }
+
+a:focus-visible { outline: 2px solid var(--me); outline-offset: 2px }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto } .card, .btn { transition: none } .card:hover, .btn:hover { transform: none } }
+@media (max-width: 560px) {
+  .brand span { display: none }
+  .bar nav a { padding: 8px 10px; font-size: 12.5px }
+  .stage { border-radius: 22px }
+  footer { border-radius: 22px }
+}
+.main { display: flex; flex-direction: column; gap: 16px }
