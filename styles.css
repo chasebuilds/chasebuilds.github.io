@@ -108,3 +108,16 @@ a:focus-visible { outline: 2px solid var(--me); outline-offset: 2px }
 .local-offers b { display: block; font-weight: 600; font-size: 15px; margin-bottom: 4px }
 .local-offers .price { display: inline-block; margin-top: 8px; font-family: var(--f-num); font-size: 13px; color: var(--me) }
 .cta { margin: 18px 0 0 }
+
+/* Skill groups inside #tools */
+.groups { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 8px }
+.groups a { font-size: 13px; font-weight: 500; text-decoration: none; padding: 7px 13px; border-radius: var(--r-pill); background: var(--card); border: 1px solid var(--glass-edge); white-space: nowrap }
+.groups a:hover { background: var(--card-hi); color: var(--me) }
+.group { margin: 28px 0 2px; font-size: clamp(17px, 2vw, 20px); font-weight: 600; letter-spacing: -.015em; scroll-margin-top: 84px }
+.group-sub { margin: 0 0 14px; color: var(--ink-2); font-size: 14px; max-width: 66ch }
+.more { margin-top: 14px }
+.more > summary { cursor: pointer; display: inline-block; list-style: none; font-size: 13.5px; font-weight: 600; padding: 9px 16px; border-radius: var(--r-pill); background: var(--card-hi); border: 1px solid var(--glass-edge) }
+.more > summary::-webkit-details-marker { display: none }
+.more > summary::after { content: " +" }
+.more[open] > summary::after { content: " \2212" }
+.more[open] > summary { margin-bottom: 14px }
