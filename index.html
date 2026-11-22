@@ -40,7 +40,7 @@
     <section class="stage glass" id="tools">
       <h2>Work</h2>
       <p class="sub">Grouped by the kind of job. Tap an image to open it full size.</p>
-      <nav class="groups" aria-label="Skill groups"><a href="#g-data">Data cleanup and PDFs</a><a href="#g-web">Websites and design</a><a href="#g-apps">Apps and dashboards</a><a href="#g-api">APIs and automation</a><a href="#g-security">Security checkups</a><a href="#g-ai">AI with local models</a></nav>
+      <nav class="groups" aria-label="Skill groups"><a href="#g-data">Data cleanup and PDFs</a><a href="#g-realestate">Real estate and appraisal</a><a href="#g-maps">Maps, 3D and land</a><a href="#g-web">Websites and design</a><a href="#g-apps">Apps and dashboards</a><a href="#g-api">APIs and automation</a><a href="#g-security">Security checkups</a><a href="#g-ai">AI with local models</a></nav>
 
       <h3 class="group" id="g-data">Data cleanup and PDFs</h3>
       <p class="group-sub">Messy spreadsheets, PDFs and customer lists turned into clean files, with every change logged.</p>
@@ -185,6 +185,97 @@
         </article>
       </div>
       </details>
+
+      <h3 class="group" id="g-realestate">Real estate and appraisal</h3>
+      <p class="group-sub">Tools for appraisers, agents and assessors: comps, value models, cost and income approaches, ratio studies. These are analysis tools, not appraisals; a USPAP appraisal needs a licensed or certified appraiser.</p>
+      <div class="tools">
+        <article class="card tool">
+          <a class="shot" href="img/comparable-sales-grid.webp" target="_blank" rel="noopener"><img src="img/comparable-sales-grid-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="comparable-sales-grid: Sales comparison grid: finds comps, adjusts each line with rates measured from the sales file, and reconciles a value range."></a>
+          <div class="body">
+            <h3>comparable-sales-grid</h3>
+            <p>Sales comparison grid: finds comps, adjusts each line with rates measured from the sales file, and reconciles a value range.</p>
+            <p class="result"><span>Measured</span>Within 5% of true value on 93.0% of 200 synthetic test homes.</p>
+            <div class="links"><a href="https://github.com/chasebuilds/comparable-sales-grid">Repo</a><a href="https://chasebuilds.github.io/comparable-sales-grid/">Live demo</a></div>
+          </div>
+        </article>
+        <article class="card tool">
+          <a class="shot" href="img/home-value-model.webp" target="_blank" rel="noopener"><img src="img/home-value-model-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="home-value-model: Automated valuation model tested on later sales, with a confidence score that says when not to trust an estimate."></a>
+          <div class="body">
+            <h3>home-value-model</h3>
+            <p>Automated valuation model tested on later sales, with a confidence score that says when not to trust an estimate.</p>
+            <p class="result"><span>Measured</span>6.0% median error, 72.4% within 10%, on 718 later Ames, Iowa sales.</p>
+            <div class="links"><a href="https://github.com/chasebuilds/home-value-model">Repo</a><a href="https://chasebuilds.github.io/home-value-model/">Live demo</a></div>
+          </div>
+        </article>
+        <article class="card tool">
+          <a class="shot" href="img/housing-market-trends.webp" target="_blank" rel="noopener"><img src="img/housing-market-trends-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="housing-market-trends: Market-conditions dashboard: monthly metrics by market and price band, and a time-adjustment rate with a 95% band."></a>
+          <div class="body">
+            <h3>housing-market-trends</h3>
+            <p>Market-conditions dashboard: monthly metrics by market and price band, and a time-adjustment rate with a 95% band.</p>
+            <p class="result"><span>Measured</span>1.55 point mean error on the yearly price change over 196 synthetic market windows.</p>
+            <div class="links"><a href="https://github.com/chasebuilds/housing-market-trends">Repo</a><a href="https://chasebuilds.github.io/housing-market-trends/">Live demo</a></div>
+          </div>
+        </article>
+        <article class="card tool">
+          <a class="shot" href="img/assessment-ratio-study.webp" target="_blank" rel="noopener"><img src="img/assessment-ratio-study-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="assessment-ratio-study: IAAO-style sales ratio study of a tax roll: COD, PRD, PRB and sales-chasing checks with a PASS, REVIEW or FAIL report."></a>
+          <div class="body">
+            <h3>assessment-ratio-study</h3>
+            <p>IAAO-style sales ratio study of a tax roll: COD, PRD, PRB and sales-chasing checks with a PASS, REVIEW or FAIL report.</p>
+            <p class="result"><span>Measured</span>Regressivity, under-assessment and sales chasing caught in 30 of 30 seeded counties.</p>
+            <div class="links"><a href="https://github.com/chasebuilds/assessment-ratio-study">Repo</a><a href="https://chasebuilds.github.io/assessment-ratio-study/">Live demo</a></div>
+          </div>
+        </article>
+        <article class="card tool">
+          <a class="shot" href="img/listing-data-normalizer.webp" target="_blank" rel="noopener"><img src="img/listing-data-normalizer-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="listing-data-normalizer: Messy MLS, assessor and comps exports to one table in RESO field names, duplicates merged, price history kept."></a>
+          <div class="body">
+            <h3>listing-data-normalizer</h3>
+            <p>Messy MLS, assessor and comps exports to one table in RESO field names, duplicates merged, price history kept.</p>
+            <p class="result"><span>Measured</span>159,352 of 159,352 fields exact, 98.8% of duplicate pairs found.</p>
+            <div class="links"><a href="https://github.com/chasebuilds/listing-data-normalizer">Repo</a><a href="https://chasebuilds.github.io/listing-data-normalizer/">Live demo</a></div>
+          </div>
+        </article>
+        <article class="card tool">
+          <a class="shot" href="img/income-approach-valuation.webp" target="_blank" rel="noopener"><img src="img/income-approach-valuation-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="income-approach-valuation: Income approach for rentals and small commercial: rent roll to NOI, direct cap, band of investment and DCF, reconciled."></a>
+          <div class="body">
+            <h3>income-approach-valuation</h3>
+            <p>Income approach for rentals and small commercial: rent roll to NOI, direct cap, band of investment and DCF, reconciled.</p>
+            <div class="links"><a href="https://github.com/chasebuilds/income-approach-valuation">Repo</a><a href="https://chasebuilds.github.io/income-approach-valuation/">Live demo</a></div>
+          </div>
+        </article>
+      </div>
+      <details class="more"><summary>2 more appraisal tools</summary>
+      <div class="tools">
+        <article class="card tool">
+          <a class="shot" href="img/cost-approach-calculator.webp" target="_blank" rel="noopener"><img src="img/cost-approach-calculator-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="cost-approach-calculator: Cost approach calculator: replacement cost new, depreciation and land value to an indicated value, every step shown."></a>
+          <div class="body">
+            <h3>cost-approach-calculator</h3>
+            <p>Cost approach calculator: replacement cost new, depreciation and land value to an indicated value, every step shown.</p>
+            <div class="links"><a href="https://github.com/chasebuilds/cost-approach-calculator">Repo</a><a href="https://chasebuilds.github.io/cost-approach-calculator/">Live demo</a></div>
+          </div>
+        </article>
+        <article class="card tool">
+          <a class="shot" href="img/valuation-report-builder.webp" target="_blank" rel="noopener"><img src="img/valuation-report-builder-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="valuation-report-builder: One YAML or JSON file to a clean property valuation summary in HTML and PDF, with the math checked first."></a>
+          <div class="body">
+            <h3>valuation-report-builder</h3>
+            <p>One YAML or JSON file to a clean property valuation summary in HTML and PDF, with the math checked first.</p>
+            <div class="links"><a href="https://github.com/chasebuilds/valuation-report-builder">Repo</a><a href="https://chasebuilds.github.io/valuation-report-builder/">Live demo</a></div>
+          </div>
+        </article>
+      </div>
+      </details>
+
+      <h3 class="group" id="g-maps">Maps, 3D and land</h3>
+      <p class="group-sub">Public LiDAR, flood and stream data turned into 3D maps and first-pass land studies in the browser.</p>
+      <div class="tools">
+        <article class="card tool">
+          <a class="shot" href="img/land-feasibility-3d.webp" target="_blank" rel="noopener"><img src="img/land-feasibility-3d-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="land-feasibility-3d: First-pass land study in the browser: USGS LiDAR terrain in 3D, slope classes, lots and pads, cut and fill, flood and stream checks, four-exit pro forma."></a>
+          <div class="body">
+            <h3>land-feasibility-3d</h3>
+            <p>First-pass land study in the browser: USGS LiDAR terrain in 3D, slope classes, lots and pads, cut and fill, flood and stream checks, four-exit pro forma.</p>
+            <div class="links"><a href="https://github.com/chasebuilds/land-feasibility-3d">Repo</a><a href="https://chasebuilds.github.io/land-feasibility-3d/">Live demo</a></div>
+          </div>
+        </article>
+      </div>
 
       <h3 class="group" id="g-web">Websites and design</h3>
       <p class="group-sub">Fast, mobile-first pages and motion that work without a framework.</p>
