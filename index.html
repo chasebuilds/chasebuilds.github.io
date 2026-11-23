@@ -40,7 +40,7 @@
     <section class="stage glass" id="tools">
       <h2>Work</h2>
       <p class="sub">Grouped by the kind of job. Tap an image to open it full size.</p>
-      <nav class="groups" aria-label="Skill groups"><a href="#g-data">Data cleanup and PDFs</a><a href="#g-realestate">Real estate and appraisal</a><a href="#g-maps">Maps, 3D and land</a><a href="#g-web">Websites and design</a><a href="#g-apps">Apps and dashboards</a><a href="#g-api">APIs and automation</a><a href="#g-security">Security checkups</a><a href="#g-ai">AI with local models</a></nav>
+      <nav class="groups" aria-label="Skill groups"><a href="#g-data">Data cleanup and PDFs</a><a href="#g-realestate">Real estate</a><a href="#g-maps">Maps, 3D and land</a><a href="#g-web">Websites and design</a><a href="#g-apps">Apps and dashboards</a><a href="#g-api">APIs and automation</a><a href="#g-security">Security checkups</a><a href="#g-ai">AI with local models</a></nav>
 
       <h3 class="group" id="g-data">Data cleanup and PDFs</h3>
       <p class="group-sub">Messy spreadsheets, PDFs and customer lists turned into clean files, with every change logged.</p>
@@ -186,8 +186,8 @@
       </div>
       </details>
 
-      <h3 class="group" id="g-realestate">Real estate and appraisal</h3>
-      <p class="group-sub">Tools for appraisers, agents and assessors: comps, value models, cost and income approaches, ratio studies. These are analysis tools, not appraisals; a USPAP appraisal needs a licensed or certified appraiser.</p>
+      <h3 class="group" id="g-realestate">Real estate</h3>
+      <p class="group-sub">Tools for agents, appraisers and assessors: listing pages, net sheets and CMAs, showing routes, comps, value models and ratio studies. Analysis tools, not appraisals; a USPAP appraisal needs a licensed or certified appraiser.</p>
       <div class="tools">
         <article class="card tool">
           <a class="shot" href="img/comparable-sales-grid.webp" target="_blank" rel="noopener"><img src="img/comparable-sales-grid-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="comparable-sales-grid: Sales comparison grid: finds comps, adjusts each line with rates measured from the sales file, and reconciles a value range."></a>
@@ -208,6 +208,32 @@
           </div>
         </article>
         <article class="card tool">
+          <a class="shot" href="img/listing-kit.webp" target="_blank" rel="noopener"><img src="img/listing-kit-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="listing-kit: One YAML file to a fast single-listing website (gallery, map, open house calendar, payment estimate, print flyer), plus a fair-housing wording checker."></a>
+          <div class="body">
+            <h3>listing-kit</h3>
+            <p>One YAML file to a fast single-listing website (gallery, map, open house calendar, payment estimate, print flyer), plus a fair-housing wording checker.</p>
+            <p class="result"><span>Measured</span>Checker precision 94.0% on 137 held-out sentences; Lighthouse 100 on listing pages.</p>
+            <div class="links"><a href="https://github.com/chasebuilds/listing-kit">Repo</a><a href="https://chasebuilds.github.io/listing-kit/">Live demo</a></div>
+          </div>
+        </article>
+        <article class="card tool">
+          <a class="shot" href="img/seller-net-sheet-cma.webp" target="_blank" rel="noopener"><img src="img/seller-net-sheet-cma-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="seller-net-sheet-cma: Seller net sheet with three price scenarios and proration formulas shown, plus a CMA listing presentation from a comps file."></a>
+          <div class="body">
+            <h3>seller-net-sheet-cma</h3>
+            <p>Seller net sheet with three price scenarios and proration formulas shown, plus a CMA listing presentation from a comps file.</p>
+            <div class="links"><a href="https://github.com/chasebuilds/seller-net-sheet-cma">Repo</a><a href="https://chasebuilds.github.io/seller-net-sheet-cma/">Live demo</a></div>
+          </div>
+        </article>
+        <article class="card tool">
+          <a class="shot" href="img/showing-route-planner.webp" target="_blank" rel="noopener"><img src="img/showing-route-planner-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="showing-route-planner: Orders a day of showings to fit every listing window with the least driving; offline phone app with a buyer itinerary and calendar file."></a>
+          <div class="body">
+            <h3>showing-route-planner</h3>
+            <p>Orders a day of showings to fit every listing window with the least driving; offline phone app with a buyer itinerary and calendar file.</p>
+            <p class="result"><span>Measured</span>Matched the exact best route on 111 of 120 small test days.</p>
+            <div class="links"><a href="https://github.com/chasebuilds/showing-route-planner">Repo</a><a href="https://chasebuilds.github.io/showing-route-planner/">Live demo</a></div>
+          </div>
+        </article>
+        <article class="card tool">
           <a class="shot" href="img/housing-market-trends.webp" target="_blank" rel="noopener"><img src="img/housing-market-trends-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="housing-market-trends: Market-conditions dashboard: monthly metrics by market and price band, and a time-adjustment rate with a 95% band."></a>
           <div class="body">
             <h3>housing-market-trends</h3>
@@ -216,6 +242,9 @@
             <div class="links"><a href="https://github.com/chasebuilds/housing-market-trends">Repo</a><a href="https://chasebuilds.github.io/housing-market-trends/">Live demo</a></div>
           </div>
         </article>
+      </div>
+      <details class="more"><summary>5 more real estate tools</summary>
+      <div class="tools">
         <article class="card tool">
           <a class="shot" href="img/assessment-ratio-study.webp" target="_blank" rel="noopener"><img src="img/assessment-ratio-study-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="assessment-ratio-study: IAAO-style sales ratio study of a tax roll: COD, PRD, PRB and sales-chasing checks with a PASS, REVIEW or FAIL report."></a>
           <div class="body">
@@ -242,9 +271,6 @@
             <div class="links"><a href="https://github.com/chasebuilds/income-approach-valuation">Repo</a><a href="https://chasebuilds.github.io/income-approach-valuation/">Live demo</a></div>
           </div>
         </article>
-      </div>
-      <details class="more"><summary>2 more appraisal tools</summary>
-      <div class="tools">
         <article class="card tool">
           <a class="shot" href="img/cost-approach-calculator.webp" target="_blank" rel="noopener"><img src="img/cost-approach-calculator-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="cost-approach-calculator: Cost approach calculator: replacement cost new, depreciation and land value to an indicated value, every step shown."></a>
           <div class="body">
