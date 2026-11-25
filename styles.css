@@ -1,20 +1,20 @@
 :root {
-  --wall: #cdb9a3; --wall-2: #e9ddcf; --wood: #6b4a33; --wood-2: #8a6447; --floor: #b89a80; --glow: #fff6e6; --leaf: #6f7f52; --sofa-1: #4a3a30; --sofa-2: #2c221c;
-  --ink: #2a2019; --ink-2: rgba(42, 32, 25, .7); --ink-3: rgba(42, 32, 25, .45);
-  --glass: rgba(255, 250, 244, .22); --glass-edge: rgba(255, 255, 255, .55); --card: rgba(255, 252, 248, .58); --card-hi: rgba(255, 255, 255, .8);
-  --shadow: rgba(70, 40, 20, .22);
-  --me: #c94a2e; --good: #1a7f5f; --good-bg: rgba(31, 154, 114, .14);
-  --solid: #2a2019; --solid-fg: #fbf5ee;
+  --wall: #b4bce6; --wall-2: #d3d7f3; --glow: #eef0ff; --blob-1: #c9b8ec; --blob-2: #a9c6ee; --blob-3: #b9d9cf;
+  --ink: #222744; --ink-2: rgba(34, 39, 68, .72); --ink-3: rgba(34, 39, 68, .45);
+  --glass: rgba(255, 255, 255, .3); --glass-edge: rgba(255, 255, 255, .62); --card: rgba(255, 255, 255, .55); --card-hi: rgba(255, 255, 255, .84);
+  --shadow: rgba(28, 32, 74, .26);
+  --me: #3a43c4; --good: #17704f; --good-bg: rgba(31, 154, 114, .14);
+  --solid: #222744; --solid-fg: #f3f4ff;
   --f-ui: "Onest", "Segoe UI", system-ui, sans-serif; --f-num: "Geist Mono", ui-monospace, "Cascadia Mono", monospace;
   --r-lg: 28px; --r-md: 18px; --r-pill: 999px;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) { :root {
-  --wall: #2a1f19; --wall-2: #3b2c22; --wood: #1d140e; --wood-2: #33241a; --floor: #241a14; --glow: #ffb867; --leaf: #2f3a24;
-  --ink: #f6ece2; --ink-2: rgba(246, 236, 226, .72); --ink-3: rgba(246, 236, 226, .45);
-  --glass: rgba(34, 24, 18, .34); --glass-edge: rgba(255, 255, 255, .14); --card: rgba(48, 36, 28, .6); --card-hi: rgba(70, 54, 42, .8);
-  --shadow: rgba(0, 0, 0, .45); --me: #ff7a55; --good: #4fd1a1; --good-bg: rgba(79, 209, 161, .14);
-  --solid: #f6ece2; --solid-fg: #2a2019; color-scheme: dark } }
+  --wall: #1b2040; --wall-2: #2a3060; --glow: #3e4690; --blob-1: #3b2f6a; --blob-2: #24416e; --blob-3: #1f4a46;
+  --ink: #eef0ff; --ink-2: rgba(238, 240, 255, .72); --ink-3: rgba(238, 240, 255, .45);
+  --glass: rgba(30, 34, 66, .42); --glass-edge: rgba(255, 255, 255, .14); --card: rgba(44, 50, 92, .6); --card-hi: rgba(62, 70, 124, .82);
+  --shadow: rgba(0, 0, 0, .5); --me: #b8bfff; --good: #4fd1a1; --good-bg: rgba(79, 209, 161, .14);
+  --solid: #eef0ff; --solid-fg: #222744; color-scheme: dark } }
 
 * { box-sizing: border-box }
 html { scroll-behavior: smooth; scroll-padding-top: 84px }
@@ -23,18 +23,13 @@ a { color: inherit }
 img { display: block; max-width: 100%; height: auto }
 .num { font-family: var(--f-num); font-variant-numeric: tabular-nums; letter-spacing: -.02em }
 
-/* Painted warm room behind the glass */
+/* Soft periwinkle backdrop behind the glass */
 .room { position: fixed; inset: 0; z-index: 0; overflow: hidden;
-  background: radial-gradient(60% 50% at 78% 18%, var(--glow), transparent 70%), linear-gradient(180deg, var(--wall-2) 0%, var(--wall) 62%, var(--floor) 62.2%, var(--floor) 100%) }
-.room i { position: absolute; display: block }
-.room .panel { left: 0; top: 0; width: 13%; height: 70%; background: repeating-linear-gradient(90deg, var(--wood) 0 18px, var(--wood-2) 18px 22px) }
-.room .shelf { right: 6%; top: 8%; width: 30%; height: 46%; border-radius: 6px; background: linear-gradient(180deg, var(--wood-2), var(--wood)); box-shadow: inset 0 -14px 0 rgba(0,0,0,.18) }
-.room .window { right: 9%; top: 11%; width: 24%; height: 34%; border-radius: 4px; background: linear-gradient(160deg, var(--glow), var(--wall-2)); opacity: .9 }
-.room .sheet { left: 22%; top: 12%; width: 18%; height: 30%; border-radius: 4px; opacity: .55;
-  background: repeating-linear-gradient(0deg, transparent 0 15px, var(--wood-2) 15px 16px), repeating-linear-gradient(90deg, transparent 0 46px, var(--wood-2) 46px 47px), var(--wall-2) }
-.room .sofa { left: -4%; bottom: 8%; width: 34%; height: 22%; border-radius: 40px 40px 12px 12px; background: linear-gradient(180deg, var(--sofa-1), var(--sofa-2)) }
-.room .plant { right: 2%; bottom: 14%; width: 120px; height: 240px; border-radius: 60px 60px 20px 20px; background: radial-gradient(ellipse at 50% 30%, var(--leaf), transparent 70%) }
-.room .table { left: 40%; bottom: 4%; width: 26%; height: 9%; border-radius: 50%; background: radial-gradient(ellipse, var(--wood-2), var(--wood) 70%, transparent 72%) }
+  background: radial-gradient(70% 55% at 50% 0%, var(--glow), transparent 70%), linear-gradient(180deg, var(--wall-2), var(--wall)) }
+.room i { position: absolute; display: block; border-radius: 50%; filter: blur(60px); opacity: .7 }
+.room i:nth-child(1) { left: -8%; top: 12%; width: 46vmax; height: 46vmax; background: var(--blob-1) }
+.room i:nth-child(2) { right: -12%; top: 38%; width: 50vmax; height: 50vmax; background: var(--blob-2) }
+.room i:nth-child(3) { left: 30%; bottom: -24%; width: 40vmax; height: 40vmax; background: var(--blob-3); opacity: .45 }
 
 .glass { background: var(--glass); -webkit-backdrop-filter: blur(26px) saturate(150%); backdrop-filter: blur(26px) saturate(150%);
   border: 1px solid var(--glass-edge); box-shadow: inset 0 1px 0 var(--glass-edge), 0 24px 60px -20px var(--shadow) }
@@ -67,20 +62,6 @@ img { display: block; max-width: 100%; height: auto }
 .btn.primary { background: var(--solid); color: var(--solid-fg); border-color: transparent }
 .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -10px var(--shadow) }
 
-/* Tool cards */
-.tools { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 16px }
-.tool { display: flex; flex-direction: column; overflow: hidden; min-width: 0 }
-.tool .shot { display: block; aspect-ratio: 16 / 10; background: var(--card-hi); border-bottom: 1px solid var(--glass-edge) }
-.tool .shot img { width: 100%; height: 100%; object-fit: cover }
-.tool .body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1 }
-.tool h3 { margin: 0; font-family: var(--f-num); font-size: 15px; font-weight: 500; letter-spacing: -.01em; overflow-wrap: anywhere }
-.tool p { margin: 0; color: var(--ink-2); font-size: 14px }
-.result { margin-top: 2px; padding: 10px 12px; border-radius: 12px; background: var(--good-bg); color: var(--ink); font-size: 13.5px; line-height: 1.45 }
-.result span { display: block; font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--good); margin-bottom: 2px }
-.links { margin-top: auto; padding-top: 6px; display: flex; flex-wrap: wrap; gap: 8px }
-.links a { font-size: 12.5px; font-weight: 500; text-decoration: none; padding: 6px 12px; border-radius: var(--r-pill); background: var(--card-hi); border: 1px solid var(--glass-edge); white-space: nowrap }
-.links a:hover { color: var(--me) }
-
 /* How I work + services */
 .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 16px }
 .points { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px; counter-reset: s }
@@ -94,7 +75,7 @@ img { display: block; max-width: 100%; height: auto }
 
 footer { text-align: center; padding: 14px 18px; border-radius: var(--r-pill); font-size: 13px; color: var(--ink-2) }
 
-a:focus-visible { outline: 2px solid var(--me); outline-offset: 2px }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--me); outline-offset: 2px }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto } .card, .btn { transition: none } .card:hover, .btn:hover { transform: none } }
 @media (max-width: 560px) {
   .brand span { display: none }
@@ -109,15 +90,25 @@ a:focus-visible { outline: 2px solid var(--me); outline-offset: 2px }
 .local-offers .price { display: inline-block; margin-top: 8px; font-family: var(--f-num); font-size: 13px; color: var(--me) }
 .cta { margin: 18px 0 0 }
 
-/* Skill groups inside #tools */
-.groups { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 8px }
-.groups a { font-size: 13px; font-weight: 500; text-decoration: none; padding: 7px 13px; border-radius: var(--r-pill); background: var(--card); border: 1px solid var(--glass-edge); white-space: nowrap }
-.groups a:hover { background: var(--card-hi); color: var(--me) }
-.group { margin: 28px 0 2px; font-size: clamp(17px, 2vw, 20px); font-weight: 600; letter-spacing: -.015em; scroll-margin-top: 84px }
-.group-sub { margin: 0 0 14px; color: var(--ink-2); font-size: 14px; max-width: 66ch }
-.more { margin-top: 14px }
-.more > summary { cursor: pointer; display: inline-block; list-style: none; font-size: 13.5px; font-weight: 600; padding: 9px 16px; border-radius: var(--r-pill); background: var(--card-hi); border: 1px solid var(--glass-edge) }
-.more > summary::-webkit-details-marker { display: none }
-.more > summary::after { content: " +" }
-.more[open] > summary::after { content: " \2212" }
-.more[open] > summary { margin-bottom: 14px }
+/* Work: the notebook shelf, with every project as a plain list below it */
+.shelf-host { --nbs-height: 640px; --nbs-radius: 22px; --nbs-cw: clamp(76px, 7.4vw, 96px); --nbs-gap: 12px;
+  box-shadow: inset 0 1px 0 var(--glass-edge), 0 24px 50px -28px var(--shadow) }
+.shelf-host:empty { display: none }
+.all { margin-top: 16px }
+.all > summary { cursor: pointer; display: inline-block; list-style: none; font-size: 13.5px; font-weight: 600; padding: 10px 16px; border-radius: var(--r-pill); background: var(--card-hi); border: 1px solid var(--glass-edge) }
+.all > summary::-webkit-details-marker { display: none }
+.all > summary::after { content: " +" }
+.all[open] > summary::after { content: " 2" }
+.group { margin: 24px 0 2px; font-size: clamp(16px, 1.9vw, 19px); font-weight: 600; letter-spacing: -.015em; scroll-margin-top: 84px }
+.group-sub { margin: 0 0 10px; color: var(--ink-2); font-size: 14px; max-width: 70ch }
+.plain-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px }
+.plain-list li { padding: 10px 14px; border-radius: 14px; background: var(--card); border: 1px solid var(--glass-edge); font-size: 14px; line-height: 1.5; color: var(--ink-2); overflow-wrap: anywhere }
+.plain-list .slug { font-family: var(--f-num); font-size: 13.5px; font-weight: 500; color: var(--ink); margin-right: 4px }
+.plain-list .res { color: var(--good) }
+.plain-list a { text-underline-offset: 3px }
+.plain-list a:hover { color: var(--me) }
+.card-links { display: inline-flex; flex-wrap: wrap; gap: 8px; margin-top: 10px }
+.card-links a { font-size: 13px; font-weight: 600; text-decoration: none; padding: 7px 13px; border-radius: var(--r-pill); background: var(--card-hi); border: 1px solid var(--glass-edge); white-space: nowrap }
+.card-links a:hover { color: var(--me) }
+.local-offers .new { border-color: color-mix(in srgb, var(--me) 45%, transparent) }
+@media (max-width: 560px) { .shelf-host { --nbs-height: 560px; margin: 0 -8px } }
