@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chase Builds</title>
 <meta name="description" content="Practical software for small businesses: data cleanup, websites, dashboards, booking APIs, automations, security checkups and private local AI.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://chasebuilds.github.io/">
+<meta property="og:title" content="Chase Builds: data tools, 3D web and real estate tools">
+<meta property="og:description" content="47 projects, 42 with a live demo you can try in your browser. Websites, spreadsheet cleanup, PDF to Excel, dashboards and more for small businesses.">
+<meta property="og:image" content="https://chasebuilds.github.io/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="light dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +20,7 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="room" aria-hidden="true"><i class="panel"></i><i class="shelf"></i><i class="window"></i><i class="sheet"></i><i class="sofa"></i><i class="plant"></i><i class="table"></i></div>
+<div class="room" aria-hidden="true"><i></i><i></i><i></i></div>
 
 <div class="app">
   <header class="bar glass">
@@ -37,443 +45,97 @@
       </div>
     </section>
 
-    <section class="stage glass" id="tools">
+    <section class="stage glass work" id="tools">
       <h2>Work</h2>
-      <p class="sub">Grouped by the kind of job. Tap an image to open it full size.</p>
-      <nav class="groups" aria-label="Skill groups"><a href="#g-data">Data cleanup and PDFs</a><a href="#g-realestate">Real estate</a><a href="#g-maps">Maps, 3D and land</a><a href="#g-web">Websites and design</a><a href="#g-apps">Apps and dashboards</a><a href="#g-api">APIs and automation</a><a href="#g-security">Security checkups</a><a href="#g-ai">AI with local models</a></nav>
-
-      <h3 class="group" id="g-data">Data cleanup and PDFs</h3>
-      <p class="group-sub">Messy spreadsheets, PDFs and customer lists turned into clean files, with every change logged.</p>
-      <div class="tools">
-        <article class="card tool">
-          <a class="shot" href="img/pdf-to-excel.webp" target="_blank" rel="noopener"><img src="img/pdf-to-excel-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="pdf-to-excel: Invoice PDFs to one Excel workbook, with a confidence score on every field."></a>
-          <div class="body">
-            <h3>pdf-to-excel</h3>
-            <p>Invoice PDFs to one Excel workbook, with a confidence score on every field.</p>
-            <p class="result"><span>Measured</span>3,600 of 3,600 fields correct on 400 invoices in 10 layouts.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/pdf-to-excel">Repo</a><a href="https://github.com/chasebuilds/pdf-to-excel/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/excel-cleaner-pro.webp" target="_blank" rel="noopener"><img src="img/excel-cleaner-pro-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="excel-cleaner-pro: Cleans messy CSV and Excel files and logs every change on an audit sheet."></a>
-          <div class="body">
-            <h3>excel-cleaner-pro</h3>
-            <p>Cleans messy CSV and Excel files and logs every change on an audit sheet.</p>
-            <p class="result"><span>Measured</span>5,615 of 5,627 fixable errors fixed, 611 of 611 unsafe values flagged.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/excel-cleaner-pro">Repo</a><a href="https://github.com/chasebuilds/excel-cleaner-pro/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/data-merger.webp" target="_blank" rel="noopener"><img src="img/data-merger-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="data-merger: Merges customer lists with different columns into one record per customer."></a>
-          <div class="body">
-            <h3>data-merger</h3>
-            <p>Merges customer lists with different columns into one record per customer.</p>
-            <p class="result"><span>Measured</span>28,512 rows from 5 files with 0 false merges.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/data-merger">Repo</a><a href="https://github.com/chasebuilds/data-merger/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/small-business-county-study.webp" target="_blank" rel="noopener"><img src="img/small-business-county-study-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="small-business-county-study: Small-business conditions in 31 Eastern Kentucky counties from free Census files, with charts and a written report rebuilt from one command."></a>
-          <div class="body">
-            <h3>small-business-county-study</h3>
-            <p>Small-business conditions in 31 Eastern Kentucky counties from free Census files, with charts and a written report rebuilt from one command.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/small-business-county-study">Repo</a><a href="https://chasebuilds.github.io/small-business-county-study/">Live demo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/pdf-table-extractor.webp" target="_blank" rel="noopener"><img src="img/pdf-table-extractor-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="pdf-table-extractor: Tables from digital PDFs to clean Excel and CSV, stitched across pages, with a totals check on every table."></a>
-          <div class="body">
-            <h3>pdf-table-extractor</h3>
-            <p>Tables from digital PDFs to clean Excel and CSV, stitched across pages, with a totals check on every table.</p>
-            <p class="result"><span>Measured</span>38,528 of 38,968 cells exact, 240 of 240 tables found.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/pdf-table-extractor">Repo</a><a href="https://github.com/chasebuilds/pdf-table-extractor/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/address-normalizer.webp" target="_blank" rel="noopener"><img src="img/address-normalizer-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="address-normalizer: Messy US mailing addresses to standardized, split fields, with duplicates grouped."></a>
-          <div class="body">
-            <h3>address-normalizer</h3>
-            <p>Messy US mailing addresses to standardized, split fields, with duplicates grouped.</p>
-            <p class="result"><span>Measured</span>99.5% of cleaned rows fully right, 100% duplicate precision.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/address-normalizer">Repo</a><a href="https://github.com/chasebuilds/address-normalizer/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
-          </div>
-        </article>
-      </div>
-      <details class="more"><summary>10 more data tools</summary>
-      <div class="tools">
-        <article class="card tool">
-          <a class="shot" href="img/data-quality-checks.webp" target="_blank" rel="noopener"><img src="img/data-quality-checks-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="data-quality-checks: Declarative checks for CSV, Excel and Parquet files, run as DuckDB SQL, with a pass/fail report."></a>
-          <div class="body">
-            <h3>data-quality-checks</h3>
-            <p>Declarative checks for CSV, Excel and Parquet files, run as DuckDB SQL, with a pass/fail report.</p>
-            <p class="result"><span>Measured</span>1,784 of 1,800 planted faults caught, 0 false alarms in 220 clean runs.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/data-quality-checks">Repo</a><a href="https://github.com/chasebuilds/data-quality-checks/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/business-research.webp" target="_blank" rel="noopener"><img src="img/business-research-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="business-research-tool: Company names to a research sheet where every fact has a source."></a>
-          <div class="body">
-            <h3>business-research-tool</h3>
-            <p>Company names to a research sheet where every fact has a source.</p>
-            <p class="result"><span>Measured</span>99.4% match precision on 300 test companies.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/business-research-tool">Repo</a><a href="https://github.com/chasebuilds/business-research-tool/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <div class="body">
-            <h3>spreadsheet-diff</h3>
-            <p>Compare two versions of a spreadsheet, cell by cell.</p>
-            <p class="result"><span>Measured</span>2,803 of 2,803 planted edits found, 0 false flags.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/spreadsheet-diff">Repo</a><a href="https://github.com/chasebuilds/spreadsheet-diff/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <div class="body">
-            <h3>product-matcher</h3>
-            <p>Match products between two lists by SKU, units and fuzzy names.</p>
-            <p class="result"><span>Measured</span>2,216 of 2,216 automatic matches correct.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/product-matcher">Repo</a><a href="https://github.com/chasebuilds/product-matcher/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <div class="body">
-            <h3>excel-to-sql</h3>
-            <p>Load CSV and Excel into SQL with type inference and a load report.</p>
-            <p class="result"><span>Measured</span>2,000 of 2,000 columns typed correctly.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/excel-to-sql">Repo</a><a href="https://github.com/chasebuilds/excel-to-sql/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <div class="body">
-            <h3>json-to-tables</h3>
-            <p>Nested JSON to tidy related tables in Excel, CSV or SQLite.</p>
-            <p class="result"><span>Measured</span>426,604 of 426,604 values placed exactly once.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/json-to-tables">Repo</a><a href="https://github.com/chasebuilds/json-to-tables/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <div class="body">
-            <h3>lead-list-qa</h3>
-            <p>Offline quality checks for B2B contact lists.</p>
-            <p class="result"><span>Measured</span>1,531 of 1,531 planted faults caught.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/lead-list-qa">Repo</a><a href="https://github.com/chasebuilds/lead-list-qa/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <div class="body">
-            <h3>excel-formula-auditor</h3>
-            <p>Scan Excel workbooks for formula errors, hard-coded numbers and broken links.</p>
-            <p class="result"><span>Measured</span>All 6 planted issue types caught, 0 false flags.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/excel-formula-auditor">Repo</a><a href="https://github.com/chasebuilds/excel-formula-auditor/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <div class="body">
-            <h3>transaction-categorizer</h3>
-            <p>Categorize bank transactions with editable rules and a monthly summary.</p>
-            <p class="result"><span>Measured</span>5,100 of 5,100 seeded transactions categorized.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/transaction-categorizer">Repo</a><a href="https://github.com/chasebuilds/transaction-categorizer/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <div class="body">
-            <h3>csv-combine-split</h3>
-            <p>Combine a folder of files with aligned columns, or split a big file.</p>
-            <p class="result"><span>Measured</span>100,000 of 100,000 rows out, columns aligned.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/csv-combine-split">Repo</a><a href="https://github.com/chasebuilds/csv-combine-split/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
-          </div>
-        </article>
-      </div>
+      <p class="sub">9 notebooks, one per kind of job. Open one and flip through the projects: a screenshot, what it does, the measured result, and links to the demo and the code.</p>
+      <div class="shelf-host" id="shelf"></div>
+      <script type="application/json" id="shelf-data">{"notebooks":[{"id":"data","title":"Data cleanup and PDFs","subtitle":"16 projects","cover":{"color":"#8eb2e6","pattern":"grid"},"pages":[{"title":"pdf-to-excel","text":"Invoice PDFs to one Excel workbook, with a confidence score on every field.","image":{"src":"img/pdf-to-excel-sm.webp","alt":"pdf-to-excel screenshot","width":720,"height":450},"note":"3,600 of 3,600 fields correct on 400 invoices in 10 layouts.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/pdf-to-excel/"},{"label":"Repo","href":"https://github.com/chasebuilds/pdf-to-excel"}]},{"title":"excel-cleaner-pro","text":"Cleans messy CSV and Excel files and logs every change on an audit sheet.","image":{"src":"img/excel-cleaner-pro-sm.webp","alt":"excel-cleaner-pro screenshot","width":720,"height":450},"note":"5,615 of 5,627 fixable errors fixed, 611 of 611 unsafe values flagged.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/excel-cleaner-pro/"},{"label":"Repo","href":"https://github.com/chasebuilds/excel-cleaner-pro"}]},{"title":"data-merger","text":"Merges customer lists with different columns into one record per customer.","image":{"src":"img/data-merger-sm.webp","alt":"data-merger screenshot","width":720,"height":450},"note":"28,512 rows from 5 files with 0 false merges.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/data-merger/"},{"label":"Repo","href":"https://github.com/chasebuilds/data-merger"}]},{"title":"small-business-county-study","text":"Small-business conditions in 31 Eastern Kentucky counties from free Census files, with charts and a written report rebuilt from one command.","image":{"src":"img/small-business-county-study-sm.webp","alt":"small-business-county-study screenshot","width":720,"height":450},"links":[{"label":"Live demo","href":"https://chasebuilds.github.io/small-business-county-study/"},{"label":"Repo","href":"https://github.com/chasebuilds/small-business-county-study"}]},{"title":"pdf-table-extractor","text":"Tables from digital PDFs to clean Excel and CSV, stitched across pages, with a totals check on every table.","image":{"src":"img/pdf-table-extractor-sm.webp","alt":"pdf-table-extractor screenshot","width":720,"height":450},"note":"38,528 of 38,968 cells exact, 240 of 240 tables found.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/pdf-table-extractor/"},{"label":"Repo","href":"https://github.com/chasebuilds/pdf-table-extractor"}]},{"title":"address-normalizer","text":"Messy US mailing addresses to standardized, split fields, with duplicates grouped.","image":{"src":"img/address-normalizer-sm.webp","alt":"address-normalizer screenshot","width":720,"height":450},"note":"99.5% of cleaned rows fully right, 100% duplicate precision.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/address-normalizer/"},{"label":"Repo","href":"https://github.com/chasebuilds/address-normalizer"}]},{"title":"data-quality-checks","text":"Declarative checks for CSV, Excel and Parquet files, run as DuckDB SQL, with a pass/fail report.","image":{"src":"img/data-quality-checks-sm.webp","alt":"data-quality-checks screenshot","width":720,"height":450},"note":"1,784 of 1,800 planted faults caught, 0 false alarms in 220 clean runs.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/data-quality-checks/"},{"label":"Repo","href":"https://github.com/chasebuilds/data-quality-checks"}]},{"title":"business-research-tool","text":"Company names to a research sheet where every fact has a source.","image":{"src":"img/business-research-sm.webp","alt":"business-research-tool screenshot","width":720,"height":450},"note":"99.4% match precision on 300 test companies.","noteLabel":"Measured","links":[{"label":"Repo","href":"https://github.com/chasebuilds/business-research-tool"}]},{"title":"spreadsheet-diff","text":"Compare two versions of a spreadsheet, cell by cell.","image":{"src":"img/spreadsheet-diff-sm.webp","alt":"spreadsheet-diff screenshot","width":720,"height":450},"note":"2,803 of 2,803 planted edits found, 0 false flags.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/spreadsheet-diff/"},{"label":"Repo","href":"https://github.com/chasebuilds/spreadsheet-diff"}]},{"title":"product-matcher","text":"Match products between two lists by SKU, units and fuzzy names.","image":{"src":"img/product-matcher-sm.webp","alt":"product-matcher screenshot","width":720,"height":450},"note":"2,216 of 2,216 automatic matches correct.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/product-matcher/"},{"label":"Repo","href":"https://github.com/chasebuilds/product-matcher"}]},{"title":"excel-to-sql","text":"Load CSV and Excel into SQL with type inference and a load report.","image":{"src":"img/excel-to-sql-sm.webp","alt":"excel-to-sql screenshot","width":720,"height":450},"note":"2,000 of 2,000 columns typed correctly.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/excel-to-sql/"},{"label":"Repo","href":"https://github.com/chasebuilds/excel-to-sql"}]},{"title":"json-to-tables","text":"Nested JSON to tidy related tables in Excel, CSV or SQLite.","image":{"src":"img/json-to-tables-sm.webp","alt":"json-to-tables screenshot","width":720,"height":450},"note":"426,604 of 426,604 values placed exactly once.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/json-to-tables/"},{"label":"Repo","href":"https://github.com/chasebuilds/json-to-tables"}]},{"title":"lead-list-qa","text":"Offline quality checks for B2B contact lists.","image":{"src":"img/lead-list-qa-sm.webp","alt":"lead-list-qa screenshot","width":720,"height":450},"note":"1,531 of 1,531 planted faults caught.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/lead-list-qa/"},{"label":"Repo","href":"https://github.com/chasebuilds/lead-list-qa"}]},{"title":"excel-formula-auditor","text":"Scan Excel workbooks for formula errors, hard-coded numbers and broken links.","image":{"src":"img/excel-formula-auditor-sm.webp","alt":"excel-formula-auditor screenshot","width":720,"height":450},"note":"All 6 planted issue types caught, 0 false flags.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/excel-formula-auditor/"},{"label":"Repo","href":"https://github.com/chasebuilds/excel-formula-auditor"}]},{"title":"transaction-categorizer","text":"Categorize bank transactions with editable rules and a monthly summary.","image":{"src":"img/transaction-categorizer-sm.webp","alt":"transaction-categorizer screenshot","width":720,"height":450},"note":"5,100 of 5,100 seeded transactions categorized.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/transaction-categorizer/"},{"label":"Repo","href":"https://github.com/chasebuilds/transaction-categorizer"}]},{"title":"csv-combine-split","text":"Combine a folder of files with aligned columns, or split a big file.","image":{"src":"img/csv-combine-split-sm.webp","alt":"csv-combine-split screenshot","width":720,"height":450},"note":"100,000 of 100,000 rows out, columns aligned.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/csv-combine-split/"},{"label":"Repo","href":"https://github.com/chasebuilds/csv-combine-split"}]}]},{"id":"realestate","title":"Real estate","subtitle":"11 projects","cover":{"color":"#f1c67c","pattern":"lines"},"pages":[{"title":"comparable-sales-grid","text":"Sales comparison grid: finds comps, adjusts each line with rates measured from the sales file, and reconciles a value range.","image":{"src":"img/comparable-sales-grid-sm.webp","alt":"comparable-sales-grid screenshot","width":720,"height":450},"note":"Within 5% of true value on 93.0% of 200 synthetic test homes.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/comparable-sales-grid/"},{"label":"Repo","href":"https://github.com/chasebuilds/comparable-sales-grid"}]},{"title":"home-value-model","text":"Automated valuation model tested on later sales, with a confidence score that says when not to trust an estimate.","image":{"src":"img/home-value-model-sm.webp","alt":"home-value-model screenshot","width":720,"height":450},"note":"6.0% median error, 72.4% within 10%, on 718 later Ames, Iowa sales.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/home-value-model/"},{"label":"Repo","href":"https://github.com/chasebuilds/home-value-model"}]},{"title":"listing-kit","text":"One YAML file to a fast listing website and a my-listings page (gallery, map, open house calendar, payment estimate, print flyer), plus a fair-housing wording checker.","image":{"src":"img/listing-kit-sm.webp","alt":"listing-kit screenshot","width":720,"height":450},"note":"Checker precision 95.2% on 143 held-out sentences; Lighthouse 100 on every demo page.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/listing-kit/"},{"label":"Repo","href":"https://github.com/chasebuilds/listing-kit"}]},{"title":"seller-net-sheet-cma","text":"Seller net sheet and buyer cash to close with three price scenarios and proration formulas shown, plus a CMA listing presentation from a comps file.","image":{"src":"img/seller-net-sheet-cma-sm.webp","alt":"seller-net-sheet-cma screenshot","width":720,"height":450},"note":"20,000 of 20,000 prorations match a reference to the cent.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/seller-net-sheet-cma/"},{"label":"Repo","href":"https://github.com/chasebuilds/seller-net-sheet-cma"}]},{"title":"showing-route-planner","text":"Orders a day of showings to fit every listing window with the least driving; offline phone app with CSV import, buyer itinerary and calendar file.","image":{"src":"img/showing-route-planner-sm.webp","alt":"showing-route-planner screenshot","width":720,"height":450},"note":"Exact best route on 120 of 120 tuned and 300 of 300 new test days.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/showing-route-planner/"},{"label":"Repo","href":"https://github.com/chasebuilds/showing-route-planner"}]},{"title":"housing-market-trends","text":"Market-conditions dashboard: monthly metrics by market and price band, and a time-adjustment rate with a 95% band.","image":{"src":"img/housing-market-trends-sm.webp","alt":"housing-market-trends screenshot","width":720,"height":450},"note":"1.55 point mean error on the yearly price change over 196 synthetic market windows.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/housing-market-trends/"},{"label":"Repo","href":"https://github.com/chasebuilds/housing-market-trends"}]},{"title":"assessment-ratio-study","text":"IAAO-style sales ratio study of a tax roll: COD, PRD, PRB and sales-chasing checks with a PASS, REVIEW or FAIL report.","image":{"src":"img/assessment-ratio-study-sm.webp","alt":"assessment-ratio-study screenshot","width":720,"height":450},"note":"Regressivity, under-assessment and sales chasing caught in 30 of 30 seeded counties.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/assessment-ratio-study/"},{"label":"Repo","href":"https://github.com/chasebuilds/assessment-ratio-study"}]},{"title":"listing-data-normalizer","text":"Messy MLS, assessor and comps exports to one table in RESO field names, duplicates merged, price history kept.","image":{"src":"img/listing-data-normalizer-sm.webp","alt":"listing-data-normalizer screenshot","width":720,"height":450},"note":"159,352 of 159,352 fields exact, 98.8% of duplicate pairs found.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/listing-data-normalizer/"},{"label":"Repo","href":"https://github.com/chasebuilds/listing-data-normalizer"}]},{"title":"income-approach-valuation","text":"Income approach for rentals and small commercial: rent roll to NOI, direct cap, band of investment and DCF, reconciled.","image":{"src":"img/income-approach-valuation-sm.webp","alt":"income-approach-valuation screenshot","width":720,"height":450},"links":[{"label":"Live demo","href":"https://chasebuilds.github.io/income-approach-valuation/"},{"label":"Repo","href":"https://github.com/chasebuilds/income-approach-valuation"}]},{"title":"cost-approach-calculator","text":"Cost approach calculator: replacement cost new, depreciation and land value to an indicated value, every step shown.","image":{"src":"img/cost-approach-calculator-sm.webp","alt":"cost-approach-calculator screenshot","width":720,"height":450},"note":"25,920 swept cases, 0 invariant violations.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/cost-approach-calculator/"},{"label":"Repo","href":"https://github.com/chasebuilds/cost-approach-calculator"}]},{"title":"valuation-report-builder","text":"One YAML or JSON file to a clean property valuation summary in HTML and PDF, with the math checked first.","image":{"src":"img/valuation-report-builder-sm.webp","alt":"valuation-report-builder screenshot","width":720,"height":450},"links":[{"label":"Live demo","href":"https://chasebuilds.github.io/valuation-report-builder/"},{"label":"Repo","href":"https://github.com/chasebuilds/valuation-report-builder"}]}]},{"id":"maps","title":"Maps, 3D and land","subtitle":"1 project","cover":{"color":"#9ccfb2","pattern":"dots"},"pages":[{"title":"land-feasibility-3d","text":"First-pass land study in the browser: USGS LiDAR terrain in 3D, slope classes, lots and pads, cut and fill, flood and stream checks, four-exit pro forma.","image":{"src":"img/land-feasibility-3d-sm.webp","alt":"land-feasibility-3d screenshot","width":720,"height":450},"note":"Pad cut volumes within 3.9% on synthetic terrain; turned lot grid fits 1,560 vs 1,275 lots on 100 ridges.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/land-feasibility-3d/"},{"label":"Repo","href":"https://github.com/chasebuilds/land-feasibility-3d"}]}]},{"id":"web","title":"Websites and design","subtitle":"2 projects","cover":{"color":"#efa6c6","pattern":"plain"},"pages":[{"title":"local-business-site","text":"One YAML file to a fast, mobile-first one-page website for a local business, in three themes.","image":{"src":"img/local-business-site-sm.webp","alt":"local-business-site screenshot","width":720,"height":450},"links":[{"label":"Live demo","href":"https://chasebuilds.github.io/local-business-site/"},{"label":"Repo","href":"https://github.com/chasebuilds/local-business-site"}]},{"title":"notebook-shelf","text":"A shelf of notebooks that open in 3D and flip through their pages by drag, swipe or arrow keys, from a JSON list. Plain JS and CSS, no dependencies.","image":{"src":"img/notebook-shelf-sm.webp","alt":"notebook-shelf screenshot","width":720,"height":450},"note":"11,596 bytes gzipped; 665 fps scrubbing with the CPU slowed 4x.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/notebook-shelf/"},{"label":"Repo","href":"https://github.com/chasebuilds/notebook-shelf"}]}]},{"id":"graphics","title":"Graphics","subtitle":"7 projects","cover":{"color":"#c5a4e2","pattern":"stripe"},"pages":[{"title":"motion-design-gallery","text":"Eleven copy-paste web animations in plain HTML, CSS and JavaScript, safe for visitors who turn motion off.","image":{"src":"img/motion-design-gallery-sm.webp","alt":"motion-design-gallery screenshot","width":720,"height":450},"links":[{"label":"Live demo","href":"https://chasebuilds.github.io/motion-design-gallery/"},{"label":"Repo","href":"https://github.com/chasebuilds/motion-design-gallery"}]},{"title":"r3f-showcase","text":"Four interactive 3D website pieces in React Three Fiber: product configurator, scroll-driven hero, gallery wall and a shader planet.","image":{"src":"img/r3f-showcase-sm.webp","alt":"r3f-showcase screenshot","width":720,"height":450},"note":"Lighthouse mobile score 100 on the overview, 76 to 90 on the 3D pages.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/r3f-showcase/"},{"label":"Repo","href":"https://github.com/chasebuilds/r3f-showcase"}]},{"title":"liquid-logo-studio","text":"Any SVG or PNG logo to animated liquid chrome, gold or holographic metal, saved as PNG or WebM or embedded with one script.","image":{"src":"img/liquid-logo-studio-sm.webp","alt":"liquid-logo-studio screenshot","width":720,"height":450},"note":"Embed script is 8,000 bytes gzipped.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/liquid-logo-studio/"},{"label":"Repo","href":"https://github.com/chasebuilds/liquid-logo-studio"}]},{"title":"cursor-fluid","text":"A dependency-free WebGL2 fluid background that follows the cursor, keeps hero text readable and scales quality to hold frame rate on phones.","image":{"src":"img/cursor-fluid-sm.webp","alt":"cursor-fluid screenshot","width":720,"height":450},"note":"6,984 bytes gzipped, no dependencies.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/cursor-fluid/"},{"label":"Repo","href":"https://github.com/chasebuilds/cursor-fluid"}]},{"title":"dither-pond","text":"A three.js pond scene through a Bayer and blue-noise dither pass: pick and mix a boat, ducks, heron, deer, cyclist, bats or fireflies, set wind and chop, and slide from dawn to night.","image":{"src":"img/dither-pond-sm.webp","alt":"dither-pond screenshot","width":720,"height":450},"note":"38 fps with no GPU at all (software rendering, 1280 x 720).","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/dither-pond/"},{"label":"Repo","href":"https://github.com/chasebuilds/dither-pond"}]},{"title":"window-hero","text":"A landing-page hero that turns the screen into a window: a 3D room that shifts as you move your head, tracked on your own device, with mouse, tilt and reduced-motion fallbacks.","image":{"src":"img/window-hero-sm.webp","alt":"window-hero screenshot","width":720,"height":450},"note":"Face tracker downloads only after opt-in; 15.7 KB of its own code on page load.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/window-hero/"},{"label":"Repo","href":"https://github.com/chasebuilds/window-hero"}]},{"title":"webgpu-agent-kit","text":"Helps AI coding agents write working WebGPU code: ten live examples, a line-numbered WGSL checker, a CLI and an MCP server.","image":{"src":"img/webgpu-agent-kit-sm.webp","alt":"webgpu-agent-kit screenshot","width":720,"height":450},"note":"10 of 10 examples render with no validation errors.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/webgpu-agent-kit/"},{"label":"Repo","href":"https://github.com/chasebuilds/webgpu-agent-kit"}]}]},{"id":"apps","title":"Apps and dashboards","subtitle":"5 projects","cover":{"color":"#a3d4de","pattern":"dots"},"pages":[{"title":"react-analytics-dashboard","text":"Sales and operations dashboard in React and TypeScript: key figures, trend charts, filters and CSV export.","image":{"src":"img/react-analytics-dashboard-sm.webp","alt":"react-analytics-dashboard screenshot","width":720,"height":450},"links":[{"label":"Live demo","href":"https://chasebuilds.github.io/react-analytics-dashboard/"},{"label":"Repo","href":"https://github.com/chasebuilds/react-analytics-dashboard"}]},{"title":"pc-build-planner","text":"Pick a budget and use case, get a PC parts list where every part fits, with the reason for each pick.","image":{"src":"img/pc-build-planner-sm.webp","alt":"pc-build-planner screenshot","width":720,"height":450},"links":[{"label":"Live demo","href":"https://chasebuilds.github.io/pc-build-planner/"},{"label":"Repo","href":"https://github.com/chasebuilds/pc-build-planner"}]},{"title":"field-service-pwa","text":"Phone app for trades crews: job tickets, checklists, photos, parts, time, customer signature and invoice. Works offline.","image":{"src":"img/field-service-pwa-sm.webp","alt":"field-service-pwa screenshot","width":720,"height":450},"links":[{"label":"Live demo","href":"https://chasebuilds.github.io/field-service-pwa/"},{"label":"Repo","href":"https://github.com/chasebuilds/field-service-pwa"}]},{"title":"table-export-extension","text":"Chrome and Edge extension that exports any table on a web page to CSV or Excel. No data leaves the browser.","image":{"src":"img/table-export-extension-sm.webp","alt":"table-export-extension screenshot","width":720,"height":450},"links":[{"label":"Live demo","href":"https://chasebuilds.github.io/table-export-extension/"},{"label":"Repo","href":"https://github.com/chasebuilds/table-export-extension"}]},{"title":"automated-reporting-system","text":"Raw weekly exports to a finished Excel report and HTML dashboard.","image":{"src":"img/automated-reporting-sm.webp","alt":"automated-reporting-system screenshot","width":720,"height":450},"note":"876 of 876 KPI values exact, 17 of 18 planted faults caught.","noteLabel":"Measured","links":[{"label":"Live demo","href":"https://chasebuilds.github.io/automated-reporting-system/"},{"label":"Repo","href":"https://github.com/chasebuilds/automated-reporting-system"}]}]},{"id":"api","title":"APIs and automation","subtitle":"3 projects","cover":{"color":"#d8c19c","pattern":"grid"},"pages":[{"title":"appointment-booking-api","text":"Booking backend for a small business: staff hours, time off, no double-booking, time-zone-correct slots.","image":{"src":"img/appointment-booking-api-sm.webp","alt":"appointment-booking-api screenshot","width":720,"height":450},"links":[{"label":"Live demo","href":"https://chasebuilds.github.io/appointment-booking-api/"},{"label":"Repo","href":"https://github.com/chasebuilds/appointment-booking-api"}]},{"title":"sheets-automations","text":"Five Google Sheets automations: form cleanup, summary emails, invoice PDFs, overdue reminders, low-stock alerts.","image":{"src":"img/sheets-automations-sm.webp","alt":"sheets-automations screenshot","width":720,"height":450},"links":[{"label":"Live demo","href":"https://chasebuilds.github.io/sheets-automations/"},{"label":"Repo","href":"https://github.com/chasebuilds/sheets-automations"}]},{"title":"web-data-extractor","text":"Public catalog pages to a checked spreadsheet, only where robots.txt allows.","image":{"src":"img/web-data-extractor-sm.webp","alt":"web-data-extractor screenshot","width":720,"height":450},"note":"360 of 360 field values correct on the test site.","noteLabel":"Measured","links":[{"label":"Repo","href":"https://github.com/chasebuilds/web-data-extractor"}]}]},{"id":"security","title":"Security checkups","subtitle":"1 project","cover":{"color":"#e8a39d","pattern":"stripe"},"pages":[{"title":"site-security-check","text":"A passive checkup of your own website, written up in plain English with a grade and fixes in order.","image":{"src":"img/site-security-check-sm.webp","alt":"site-security-check screenshot","width":720,"height":450},"links":[{"label":"Live demo","href":"https://chasebuilds.github.io/site-security-check/"},{"label":"Repo","href":"https://github.com/chasebuilds/site-security-check"}]}]},{"id":"ai","title":"AI with local models","subtitle":"1 project","cover":{"color":"#b5c37b","pattern":"lines"},"pages":[{"title":"pdf-qa-local","text":"Ask questions about a folder of PDFs and get answers that cite the file and page. Runs on your own computer, so documents stay private.","image":{"src":"img/pdf-qa-local-sm.webp","alt":"pdf-qa-local screenshot","width":720,"height":450},"note":"Right page cited on 29 of 30 test questions, 12 of 12 unanswerable questions refused.","noteLabel":"Measured","links":[{"label":"Repo","href":"https://github.com/chasebuilds/pdf-qa-local"}]}]}]}</script>
+      <details class="all" id="all-projects" open>
+        <summary>All 47 projects as a list</summary>
+        <h3 class="group" id="g-data">Data cleanup and PDFs</h3>
+        <p class="group-sub">Messy spreadsheets, PDFs and customer lists turned into clean files, with every change logged.</p>
+        <ul class="plain-list">
+          <li><a class="slug" href="https://github.com/chasebuilds/pdf-to-excel">pdf-to-excel</a> Invoice PDFs to one Excel workbook, with a confidence score on every field. <span class="res">Measured: 3,600 of 3,600 fields correct on 400 invoices in 10 layouts.</span> <a href="https://chasebuilds.github.io/pdf-to-excel/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/excel-cleaner-pro">excel-cleaner-pro</a> Cleans messy CSV and Excel files and logs every change on an audit sheet. <span class="res">Measured: 5,615 of 5,627 fixable errors fixed, 611 of 611 unsafe values flagged.</span> <a href="https://chasebuilds.github.io/excel-cleaner-pro/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/data-merger">data-merger</a> Merges customer lists with different columns into one record per customer. <span class="res">Measured: 28,512 rows from 5 files with 0 false merges.</span> <a href="https://chasebuilds.github.io/data-merger/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/small-business-county-study">small-business-county-study</a> Small-business conditions in 31 Eastern Kentucky counties from free Census files, with charts and a written report rebuilt from one command. <a href="https://chasebuilds.github.io/small-business-county-study/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/pdf-table-extractor">pdf-table-extractor</a> Tables from digital PDFs to clean Excel and CSV, stitched across pages, with a totals check on every table. <span class="res">Measured: 38,528 of 38,968 cells exact, 240 of 240 tables found.</span> <a href="https://chasebuilds.github.io/pdf-table-extractor/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/address-normalizer">address-normalizer</a> Messy US mailing addresses to standardized, split fields, with duplicates grouped. <span class="res">Measured: 99.5% of cleaned rows fully right, 100% duplicate precision.</span> <a href="https://chasebuilds.github.io/address-normalizer/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/data-quality-checks">data-quality-checks</a> Declarative checks for CSV, Excel and Parquet files, run as DuckDB SQL, with a pass/fail report. <span class="res">Measured: 1,784 of 1,800 planted faults caught, 0 false alarms in 220 clean runs.</span> <a href="https://chasebuilds.github.io/data-quality-checks/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/business-research-tool">business-research-tool</a> Company names to a research sheet where every fact has a source. <span class="res">Measured: 99.4% match precision on 300 test companies.</span></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/spreadsheet-diff">spreadsheet-diff</a> Compare two versions of a spreadsheet, cell by cell. <span class="res">Measured: 2,803 of 2,803 planted edits found, 0 false flags.</span> <a href="https://chasebuilds.github.io/spreadsheet-diff/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/product-matcher">product-matcher</a> Match products between two lists by SKU, units and fuzzy names. <span class="res">Measured: 2,216 of 2,216 automatic matches correct.</span> <a href="https://chasebuilds.github.io/product-matcher/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/excel-to-sql">excel-to-sql</a> Load CSV and Excel into SQL with type inference and a load report. <span class="res">Measured: 2,000 of 2,000 columns typed correctly.</span> <a href="https://chasebuilds.github.io/excel-to-sql/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/json-to-tables">json-to-tables</a> Nested JSON to tidy related tables in Excel, CSV or SQLite. <span class="res">Measured: 426,604 of 426,604 values placed exactly once.</span> <a href="https://chasebuilds.github.io/json-to-tables/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/lead-list-qa">lead-list-qa</a> Offline quality checks for B2B contact lists. <span class="res">Measured: 1,531 of 1,531 planted faults caught.</span> <a href="https://chasebuilds.github.io/lead-list-qa/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/excel-formula-auditor">excel-formula-auditor</a> Scan Excel workbooks for formula errors, hard-coded numbers and broken links. <span class="res">Measured: All 6 planted issue types caught, 0 false flags.</span> <a href="https://chasebuilds.github.io/excel-formula-auditor/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/transaction-categorizer">transaction-categorizer</a> Categorize bank transactions with editable rules and a monthly summary. <span class="res">Measured: 5,100 of 5,100 seeded transactions categorized.</span> <a href="https://chasebuilds.github.io/transaction-categorizer/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/csv-combine-split">csv-combine-split</a> Combine a folder of files with aligned columns, or split a big file. <span class="res">Measured: 100,000 of 100,000 rows out, columns aligned.</span> <a href="https://chasebuilds.github.io/csv-combine-split/">Live demo</a></li>
+        </ul>
+        <h3 class="group" id="g-realestate">Real estate</h3>
+        <p class="group-sub">Tools for agents, appraisers and assessors: listing pages, net sheets and CMAs, showing routes, comps, value models and ratio studies. Analysis tools, not appraisals; a USPAP appraisal needs a licensed or certified appraiser.</p>
+        <ul class="plain-list">
+          <li><a class="slug" href="https://github.com/chasebuilds/comparable-sales-grid">comparable-sales-grid</a> Sales comparison grid: finds comps, adjusts each line with rates measured from the sales file, and reconciles a value range. <span class="res">Measured: Within 5% of true value on 93.0% of 200 synthetic test homes.</span> <a href="https://chasebuilds.github.io/comparable-sales-grid/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/home-value-model">home-value-model</a> Automated valuation model tested on later sales, with a confidence score that says when not to trust an estimate. <span class="res">Measured: 6.0% median error, 72.4% within 10%, on 718 later Ames, Iowa sales.</span> <a href="https://chasebuilds.github.io/home-value-model/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/listing-kit">listing-kit</a> One YAML file to a fast listing website and a my-listings page (gallery, map, open house calendar, payment estimate, print flyer), plus a fair-housing wording checker. <span class="res">Measured: Checker precision 95.2% on 143 held-out sentences; Lighthouse 100 on every demo page.</span> <a href="https://chasebuilds.github.io/listing-kit/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/seller-net-sheet-cma">seller-net-sheet-cma</a> Seller net sheet and buyer cash to close with three price scenarios and proration formulas shown, plus a CMA listing presentation from a comps file. <span class="res">Measured: 20,000 of 20,000 prorations match a reference to the cent.</span> <a href="https://chasebuilds.github.io/seller-net-sheet-cma/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/showing-route-planner">showing-route-planner</a> Orders a day of showings to fit every listing window with the least driving; offline phone app with CSV import, buyer itinerary and calendar file. <span class="res">Measured: Exact best route on 120 of 120 tuned and 300 of 300 new test days.</span> <a href="https://chasebuilds.github.io/showing-route-planner/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/housing-market-trends">housing-market-trends</a> Market-conditions dashboard: monthly metrics by market and price band, and a time-adjustment rate with a 95% band. <span class="res">Measured: 1.55 point mean error on the yearly price change over 196 synthetic market windows.</span> <a href="https://chasebuilds.github.io/housing-market-trends/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/assessment-ratio-study">assessment-ratio-study</a> IAAO-style sales ratio study of a tax roll: COD, PRD, PRB and sales-chasing checks with a PASS, REVIEW or FAIL report. <span class="res">Measured: Regressivity, under-assessment and sales chasing caught in 30 of 30 seeded counties.</span> <a href="https://chasebuilds.github.io/assessment-ratio-study/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/listing-data-normalizer">listing-data-normalizer</a> Messy MLS, assessor and comps exports to one table in RESO field names, duplicates merged, price history kept. <span class="res">Measured: 159,352 of 159,352 fields exact, 98.8% of duplicate pairs found.</span> <a href="https://chasebuilds.github.io/listing-data-normalizer/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/income-approach-valuation">income-approach-valuation</a> Income approach for rentals and small commercial: rent roll to NOI, direct cap, band of investment and DCF, reconciled. <a href="https://chasebuilds.github.io/income-approach-valuation/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/cost-approach-calculator">cost-approach-calculator</a> Cost approach calculator: replacement cost new, depreciation and land value to an indicated value, every step shown. <span class="res">Measured: 25,920 swept cases, 0 invariant violations.</span> <a href="https://chasebuilds.github.io/cost-approach-calculator/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/valuation-report-builder">valuation-report-builder</a> One YAML or JSON file to a clean property valuation summary in HTML and PDF, with the math checked first. <a href="https://chasebuilds.github.io/valuation-report-builder/">Live demo</a></li>
+        </ul>
+        <h3 class="group" id="g-maps">Maps, 3D and land</h3>
+        <p class="group-sub">Public LiDAR, flood and stream data turned into 3D maps and first-pass land studies in the browser.</p>
+        <ul class="plain-list">
+          <li><a class="slug" href="https://github.com/chasebuilds/land-feasibility-3d">land-feasibility-3d</a> First-pass land study in the browser: USGS LiDAR terrain in 3D, slope classes, lots and pads, cut and fill, flood and stream checks, four-exit pro forma. <span class="res">Measured: Pad cut volumes within 3.9% on synthetic terrain; turned lot grid fits 1,560 vs 1,275 lots on 100 ridges.</span> <a href="https://chasebuilds.github.io/land-feasibility-3d/">Live demo</a></li>
+        </ul>
+        <h3 class="group" id="g-web">Websites and design</h3>
+        <p class="group-sub">Fast, mobile-first pages and motion that work without a framework.</p>
+        <ul class="plain-list">
+          <li><a class="slug" href="https://github.com/chasebuilds/local-business-site">local-business-site</a> One YAML file to a fast, mobile-first one-page website for a local business, in three themes. <a href="https://chasebuilds.github.io/local-business-site/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/notebook-shelf">notebook-shelf</a> A shelf of notebooks that open in 3D and flip through their pages by drag, swipe or arrow keys, from a JSON list. Plain JS and CSS, no dependencies. <span class="res">Measured: 11,596 bytes gzipped; 665 fps scrubbing with the CPU slowed 4x.</span> <a href="https://chasebuilds.github.io/notebook-shelf/">Live demo</a></li>
+        </ul>
+        <h3 class="group" id="g-graphics">Graphics</h3>
+        <p class="group-sub">3D, shaders and motion for the web: three.js, React Three Fiber, WebGL2 and WebGPU.</p>
+        <ul class="plain-list">
+          <li><a class="slug" href="https://github.com/chasebuilds/motion-design-gallery">motion-design-gallery</a> Eleven copy-paste web animations in plain HTML, CSS and JavaScript, safe for visitors who turn motion off. <a href="https://chasebuilds.github.io/motion-design-gallery/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/r3f-showcase">r3f-showcase</a> Four interactive 3D website pieces in React Three Fiber: product configurator, scroll-driven hero, gallery wall and a shader planet. <span class="res">Measured: Lighthouse mobile score 100 on the overview, 76 to 90 on the 3D pages.</span> <a href="https://chasebuilds.github.io/r3f-showcase/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/liquid-logo-studio">liquid-logo-studio</a> Any SVG or PNG logo to animated liquid chrome, gold or holographic metal, saved as PNG or WebM or embedded with one script. <span class="res">Measured: Embed script is 8,000 bytes gzipped.</span> <a href="https://chasebuilds.github.io/liquid-logo-studio/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/cursor-fluid">cursor-fluid</a> A dependency-free WebGL2 fluid background that follows the cursor, keeps hero text readable and scales quality to hold frame rate on phones. <span class="res">Measured: 6,984 bytes gzipped, no dependencies.</span> <a href="https://chasebuilds.github.io/cursor-fluid/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/dither-pond">dither-pond</a> A three.js pond scene through a Bayer and blue-noise dither pass: pick and mix a boat, ducks, heron, deer, cyclist, bats or fireflies, set wind and chop, and slide from dawn to night. <span class="res">Measured: 38 fps with no GPU at all (software rendering, 1280 x 720).</span> <a href="https://chasebuilds.github.io/dither-pond/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/window-hero">window-hero</a> A landing-page hero that turns the screen into a window: a 3D room that shifts as you move your head, tracked on your own device, with mouse, tilt and reduced-motion fallbacks. <span class="res">Measured: Face tracker downloads only after opt-in; 15.7 KB of its own code on page load.</span> <a href="https://chasebuilds.github.io/window-hero/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/webgpu-agent-kit">webgpu-agent-kit</a> Helps AI coding agents write working WebGPU code: ten live examples, a line-numbered WGSL checker, a CLI and an MCP server. <span class="res">Measured: 10 of 10 examples render with no validation errors.</span> <a href="https://chasebuilds.github.io/webgpu-agent-kit/">Live demo</a></li>
+        </ul>
+        <h3 class="group" id="g-apps">Apps and dashboards</h3>
+        <p class="group-sub">Web apps, dashboards and browser tools that run on a phone or laptop.</p>
+        <ul class="plain-list">
+          <li><a class="slug" href="https://github.com/chasebuilds/react-analytics-dashboard">react-analytics-dashboard</a> Sales and operations dashboard in React and TypeScript: key figures, trend charts, filters and CSV export. <a href="https://chasebuilds.github.io/react-analytics-dashboard/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/pc-build-planner">pc-build-planner</a> Pick a budget and use case, get a PC parts list where every part fits, with the reason for each pick. <a href="https://chasebuilds.github.io/pc-build-planner/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/field-service-pwa">field-service-pwa</a> Phone app for trades crews: job tickets, checklists, photos, parts, time, customer signature and invoice. Works offline. <a href="https://chasebuilds.github.io/field-service-pwa/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/table-export-extension">table-export-extension</a> Chrome and Edge extension that exports any table on a web page to CSV or Excel. No data leaves the browser. <a href="https://chasebuilds.github.io/table-export-extension/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/automated-reporting-system">automated-reporting-system</a> Raw weekly exports to a finished Excel report and HTML dashboard. <span class="res">Measured: 876 of 876 KPI values exact, 17 of 18 planted faults caught.</span> <a href="https://chasebuilds.github.io/automated-reporting-system/">Live demo</a></li>
+        </ul>
+        <h3 class="group" id="g-api">APIs and automation</h3>
+        <p class="group-sub">Backends and scripts that take repeat work off your plate.</p>
+        <ul class="plain-list">
+          <li><a class="slug" href="https://github.com/chasebuilds/appointment-booking-api">appointment-booking-api</a> Booking backend for a small business: staff hours, time off, no double-booking, time-zone-correct slots. <a href="https://chasebuilds.github.io/appointment-booking-api/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/sheets-automations">sheets-automations</a> Five Google Sheets automations: form cleanup, summary emails, invoice PDFs, overdue reminders, low-stock alerts. <a href="https://chasebuilds.github.io/sheets-automations/">Live demo</a></li>
+          <li><a class="slug" href="https://github.com/chasebuilds/web-data-extractor">web-data-extractor</a> Public catalog pages to a checked spreadsheet, only where robots.txt allows. <span class="res">Measured: 360 of 360 field values correct on the test site.</span></li>
+        </ul>
+        <h3 class="group" id="g-security">Security checkups</h3>
+        <p class="group-sub">Plain-English checkups of a website&#x27;s public setup, no hacking involved.</p>
+        <ul class="plain-list">
+          <li><a class="slug" href="https://github.com/chasebuilds/site-security-check">site-security-check</a> A passive checkup of your own website, written up in plain English with a grade and fixes in order. <a href="https://chasebuilds.github.io/site-security-check/">Live demo</a></li>
+        </ul>
+        <h3 class="group" id="g-ai">AI with local models</h3>
+        <p class="group-sub">AI that runs on your own computer, so private files never leave it.</p>
+        <ul class="plain-list">
+          <li><a class="slug" href="https://github.com/chasebuilds/pdf-qa-local">pdf-qa-local</a> Ask questions about a folder of PDFs and get answers that cite the file and page. Runs on your own computer, so documents stay private. <span class="res">Measured: Right page cited on 29 of 30 test questions, 12 of 12 unanswerable questions refused.</span></li>
+        </ul>
       </details>
-
-      <h3 class="group" id="g-realestate">Real estate</h3>
-      <p class="group-sub">Tools for agents, appraisers and assessors: listing pages, net sheets and CMAs, showing routes, comps, value models and ratio studies. Analysis tools, not appraisals; a USPAP appraisal needs a licensed or certified appraiser.</p>
-      <div class="tools">
-        <article class="card tool">
-          <a class="shot" href="img/comparable-sales-grid.webp" target="_blank" rel="noopener"><img src="img/comparable-sales-grid-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="comparable-sales-grid: Sales comparison grid: finds comps, adjusts each line with rates measured from the sales file, and reconciles a value range."></a>
-          <div class="body">
-            <h3>comparable-sales-grid</h3>
-            <p>Sales comparison grid: finds comps, adjusts each line with rates measured from the sales file, and reconciles a value range.</p>
-            <p class="result"><span>Measured</span>Within 5% of true value on 93.0% of 200 synthetic test homes.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/comparable-sales-grid">Repo</a><a href="https://chasebuilds.github.io/comparable-sales-grid/">Live demo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/home-value-model.webp" target="_blank" rel="noopener"><img src="img/home-value-model-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="home-value-model: Automated valuation model tested on later sales, with a confidence score that says when not to trust an estimate."></a>
-          <div class="body">
-            <h3>home-value-model</h3>
-            <p>Automated valuation model tested on later sales, with a confidence score that says when not to trust an estimate.</p>
-            <p class="result"><span>Measured</span>6.0% median error, 72.4% within 10%, on 718 later Ames, Iowa sales.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/home-value-model">Repo</a><a href="https://chasebuilds.github.io/home-value-model/">Live demo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/listing-kit.webp" target="_blank" rel="noopener"><img src="img/listing-kit-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="listing-kit: One YAML file to a fast listing website and a my-listings page (gallery, map, open house calendar, payment estimate, print flyer), plus a fair-housing wording checker."></a>
-          <div class="body">
-            <h3>listing-kit</h3>
-            <p>One YAML file to a fast listing website and a my-listings page (gallery, map, open house calendar, payment estimate, print flyer), plus a fair-housing wording checker.</p>
-            <p class="result"><span>Measured</span>Checker precision 95.2% on 143 held-out sentences; Lighthouse 100 on every demo page.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/listing-kit">Repo</a><a href="https://chasebuilds.github.io/listing-kit/">Live demo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/seller-net-sheet-cma.webp" target="_blank" rel="noopener"><img src="img/seller-net-sheet-cma-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="seller-net-sheet-cma: Seller net sheet and buyer cash to close with three price scenarios and proration formulas shown, plus a CMA listing presentation from a comps file."></a>
-          <div class="body">
-            <h3>seller-net-sheet-cma</h3>
-            <p>Seller net sheet and buyer cash to close with three price scenarios and proration formulas shown, plus a CMA listing presentation from a comps file.</p>
-            <p class="result"><span>Measured</span>20,000 of 20,000 prorations match a reference to the cent.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/seller-net-sheet-cma">Repo</a><a href="https://chasebuilds.github.io/seller-net-sheet-cma/">Live demo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/showing-route-planner.webp" target="_blank" rel="noopener"><img src="img/showing-route-planner-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="showing-route-planner: Orders a day of showings to fit every listing window with the least driving; offline phone app with CSV import, buyer itinerary and calendar file."></a>
-          <div class="body">
-            <h3>showing-route-planner</h3>
-            <p>Orders a day of showings to fit every listing window with the least driving; offline phone app with CSV import, buyer itinerary and calendar file.</p>
-            <p class="result"><span>Measured</span>Exact best route on 120 of 120 tuned and 300 of 300 new test days.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/showing-route-planner">Repo</a><a href="https://chasebuilds.github.io/showing-route-planner/">Live demo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/housing-market-trends.webp" target="_blank" rel="noopener"><img src="img/housing-market-trends-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="housing-market-trends: Market-conditions dashboard: monthly metrics by market and price band, and a time-adjustment rate with a 95% band."></a>
-          <div class="body">
-            <h3>housing-market-trends</h3>
-            <p>Market-conditions dashboard: monthly metrics by market and price band, and a time-adjustment rate with a 95% band.</p>
-            <p class="result"><span>Measured</span>1.55 point mean error on the yearly price change over 196 synthetic market windows.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/housing-market-trends">Repo</a><a href="https://chasebuilds.github.io/housing-market-trends/">Live demo</a></div>
-          </div>
-        </article>
-      </div>
-      <details class="more"><summary>5 more real estate tools</summary>
-      <div class="tools">
-        <article class="card tool">
-          <a class="shot" href="img/assessment-ratio-study.webp" target="_blank" rel="noopener"><img src="img/assessment-ratio-study-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="assessment-ratio-study: IAAO-style sales ratio study of a tax roll: COD, PRD, PRB and sales-chasing checks with a PASS, REVIEW or FAIL report."></a>
-          <div class="body">
-            <h3>assessment-ratio-study</h3>
-            <p>IAAO-style sales ratio study of a tax roll: COD, PRD, PRB and sales-chasing checks with a PASS, REVIEW or FAIL report.</p>
-            <p class="result"><span>Measured</span>Regressivity, under-assessment and sales chasing caught in 30 of 30 seeded counties.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/assessment-ratio-study">Repo</a><a href="https://chasebuilds.github.io/assessment-ratio-study/">Live demo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/listing-data-normalizer.webp" target="_blank" rel="noopener"><img src="img/listing-data-normalizer-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="listing-data-normalizer: Messy MLS, assessor and comps exports to one table in RESO field names, duplicates merged, price history kept."></a>
-          <div class="body">
-            <h3>listing-data-normalizer</h3>
-            <p>Messy MLS, assessor and comps exports to one table in RESO field names, duplicates merged, price history kept.</p>
-            <p class="result"><span>Measured</span>159,352 of 159,352 fields exact, 98.8% of duplicate pairs found.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/listing-data-normalizer">Repo</a><a href="https://chasebuilds.github.io/listing-data-normalizer/">Live demo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/income-approach-valuation.webp" target="_blank" rel="noopener"><img src="img/income-approach-valuation-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="income-approach-valuation: Income approach for rentals and small commercial: rent roll to NOI, direct cap, band of investment and DCF, reconciled."></a>
-          <div class="body">
-            <h3>income-approach-valuation</h3>
-            <p>Income approach for rentals and small commercial: rent roll to NOI, direct cap, band of investment and DCF, reconciled.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/income-approach-valuation">Repo</a><a href="https://chasebuilds.github.io/income-approach-valuation/">Live demo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/cost-approach-calculator.webp" target="_blank" rel="noopener"><img src="img/cost-approach-calculator-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="cost-approach-calculator: Cost approach calculator: replacement cost new, depreciation and land value to an indicated value, every step shown."></a>
-          <div class="body">
-            <h3>cost-approach-calculator</h3>
-            <p>Cost approach calculator: replacement cost new, depreciation and land value to an indicated value, every step shown.</p>
-            <p class="result"><span>Measured</span>25,920 swept cases, 0 invariant violations.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/cost-approach-calculator">Repo</a><a href="https://chasebuilds.github.io/cost-approach-calculator/">Live demo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/valuation-report-builder.webp" target="_blank" rel="noopener"><img src="img/valuation-report-builder-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="valuation-report-builder: One YAML or JSON file to a clean property valuation summary in HTML and PDF, with the math checked first."></a>
-          <div class="body">
-            <h3>valuation-report-builder</h3>
-            <p>One YAML or JSON file to a clean property valuation summary in HTML and PDF, with the math checked first.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/valuation-report-builder">Repo</a><a href="https://chasebuilds.github.io/valuation-report-builder/">Live demo</a></div>
-          </div>
-        </article>
-      </div>
-      </details>
-
-      <h3 class="group" id="g-maps">Maps, 3D and land</h3>
-      <p class="group-sub">Public LiDAR, flood and stream data turned into 3D maps and first-pass land studies in the browser.</p>
-      <div class="tools">
-        <article class="card tool">
-          <a class="shot" href="img/land-feasibility-3d.webp" target="_blank" rel="noopener"><img src="img/land-feasibility-3d-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="land-feasibility-3d: First-pass land study in the browser: USGS LiDAR terrain in 3D, slope classes, lots and pads, cut and fill, flood and stream checks, four-exit pro forma."></a>
-          <div class="body">
-            <h3>land-feasibility-3d</h3>
-            <p>First-pass land study in the browser: USGS LiDAR terrain in 3D, slope classes, lots and pads, cut and fill, flood and stream checks, four-exit pro forma.</p>
-            <p class="result"><span>Measured</span>Pad cut volumes within 3.9% on synthetic terrain; turned lot grid fits 1,560 vs 1,275 lots on 100 ridges.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/land-feasibility-3d">Repo</a><a href="https://chasebuilds.github.io/land-feasibility-3d/">Live demo</a></div>
-          </div>
-        </article>
-      </div>
-
-      <h3 class="group" id="g-web">Websites and design</h3>
-      <p class="group-sub">Fast, mobile-first pages and motion that work without a framework.</p>
-      <div class="tools">
-        <article class="card tool">
-          <a class="shot" href="img/local-business-site.webp" target="_blank" rel="noopener"><img src="img/local-business-site-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="local-business-site: One YAML file to a fast, mobile-first one-page website for a local business, in three themes."></a>
-          <div class="body">
-            <h3>local-business-site</h3>
-            <p>One YAML file to a fast, mobile-first one-page website for a local business, in three themes.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/local-business-site">Repo</a><a href="https://chasebuilds.github.io/local-business-site/">Live demo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/motion-design-gallery.webp" target="_blank" rel="noopener"><img src="img/motion-design-gallery-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="motion-design-gallery: Eleven copy-paste web animations in plain HTML, CSS and JavaScript, safe for visitors who turn motion off."></a>
-          <div class="body">
-            <h3>motion-design-gallery</h3>
-            <p>Eleven copy-paste web animations in plain HTML, CSS and JavaScript, safe for visitors who turn motion off.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/motion-design-gallery">Repo</a><a href="https://chasebuilds.github.io/motion-design-gallery/">Live demo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/r3f-showcase.webp" target="_blank" rel="noopener"><img src="img/r3f-showcase-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="r3f-showcase: Four interactive 3D website pieces in React Three Fiber: product configurator, scroll-driven hero, gallery wall and a shader planet."></a>
-          <div class="body">
-            <h3>r3f-showcase</h3>
-            <p>Four interactive 3D website pieces in React Three Fiber: product configurator, scroll-driven hero, gallery wall and a shader planet.</p>
-            <p class="result"><span>Measured</span>Lighthouse mobile score 100 on the overview, 76 to 90 on the 3D pages.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/r3f-showcase">Repo</a><a href="https://chasebuilds.github.io/r3f-showcase/">Live demo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/liquid-logo-studio.webp" target="_blank" rel="noopener"><img src="img/liquid-logo-studio-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="liquid-logo-studio: Any SVG or PNG logo to animated liquid chrome, gold or holographic metal, saved as PNG or WebM or embedded with one script."></a>
-          <div class="body">
-            <h3>liquid-logo-studio</h3>
-            <p>Any SVG or PNG logo to animated liquid chrome, gold or holographic metal, saved as PNG or WebM or embedded with one script.</p>
-            <p class="result"><span>Measured</span>Embed script is 8,000 bytes gzipped.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/liquid-logo-studio">Repo</a><a href="https://chasebuilds.github.io/liquid-logo-studio/">Live demo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/cursor-fluid.webp" target="_blank" rel="noopener"><img src="img/cursor-fluid-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="cursor-fluid: A dependency-free WebGL2 fluid background that follows the cursor, keeps hero text readable and scales quality to hold frame rate on phones."></a>
-          <div class="body">
-            <h3>cursor-fluid</h3>
-            <p>A dependency-free WebGL2 fluid background that follows the cursor, keeps hero text readable and scales quality to hold frame rate on phones.</p>
-            <p class="result"><span>Measured</span>6,984 bytes gzipped, no dependencies.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/cursor-fluid">Repo</a><a href="https://chasebuilds.github.io/cursor-fluid/">Live demo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/dither-pond.webp" target="_blank" rel="noopener"><img src="img/dither-pond-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="dither-pond: A three.js pond scene through a Bayer and blue-noise dither pass, with a time slider from dawn to night, ripples, orbit and touch."></a>
-          <div class="body">
-            <h3>dither-pond</h3>
-            <p>A three.js pond scene through a Bayer and blue-noise dither pass, with a time slider from dawn to night, ripples, orbit and touch.</p>
-            <p class="result"><span>Measured</span>51 fps with no GPU at all (software rendering, 1280 x 720).</p>
-            <div class="links"><a href="https://github.com/chasebuilds/dither-pond">Repo</a><a href="https://chasebuilds.github.io/dither-pond/">Live demo</a></div>
-          </div>
-        </article>
-      </div>
-
-      <h3 class="group" id="g-apps">Apps and dashboards</h3>
-      <p class="group-sub">Web apps, dashboards and browser tools that run on a phone or laptop.</p>
-      <div class="tools">
-        <article class="card tool">
-          <a class="shot" href="img/react-analytics-dashboard.webp" target="_blank" rel="noopener"><img src="img/react-analytics-dashboard-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="react-analytics-dashboard: Sales and operations dashboard in React and TypeScript: key figures, trend charts, filters and CSV export."></a>
-          <div class="body">
-            <h3>react-analytics-dashboard</h3>
-            <p>Sales and operations dashboard in React and TypeScript: key figures, trend charts, filters and CSV export.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/react-analytics-dashboard">Repo</a><a href="https://chasebuilds.github.io/react-analytics-dashboard/">Live demo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/pc-build-planner.webp" target="_blank" rel="noopener"><img src="img/pc-build-planner-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="pc-build-planner: Pick a budget and use case, get a PC parts list where every part fits, with the reason for each pick."></a>
-          <div class="body">
-            <h3>pc-build-planner</h3>
-            <p>Pick a budget and use case, get a PC parts list where every part fits, with the reason for each pick.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/pc-build-planner">Repo</a><a href="https://chasebuilds.github.io/pc-build-planner/">Live demo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/field-service-pwa.webp" target="_blank" rel="noopener"><img src="img/field-service-pwa-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="field-service-pwa: Phone app for trades crews: job tickets, checklists, photos, parts, time, customer signature and invoice. Works offline."></a>
-          <div class="body">
-            <h3>field-service-pwa</h3>
-            <p>Phone app for trades crews: job tickets, checklists, photos, parts, time, customer signature and invoice. Works offline.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/field-service-pwa">Repo</a><a href="https://chasebuilds.github.io/field-service-pwa/">Live demo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/table-export-extension.webp" target="_blank" rel="noopener"><img src="img/table-export-extension-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="table-export-extension: Chrome and Edge extension that exports any table on a web page to CSV or Excel. No data leaves the browser."></a>
-          <div class="body">
-            <h3>table-export-extension</h3>
-            <p>Chrome and Edge extension that exports any table on a web page to CSV or Excel. No data leaves the browser.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/table-export-extension">Repo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/automated-reporting.webp" target="_blank" rel="noopener"><img src="img/automated-reporting-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="automated-reporting-system: Raw weekly exports to a finished Excel report and HTML dashboard."></a>
-          <div class="body">
-            <h3>automated-reporting-system</h3>
-            <p>Raw weekly exports to a finished Excel report and HTML dashboard.</p>
-            <p class="result"><span>Measured</span>876 of 876 KPI values exact, 17 of 18 planted faults caught.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/automated-reporting-system">Repo</a><a href="https://github.com/chasebuilds/automated-reporting-system/blob/main/BENCHMARK.md">BENCHMARK.md</a><a href="https://chasebuilds.github.io/automated-reporting-system/">Live demo</a></div>
-          </div>
-        </article>
-      </div>
-
-      <h3 class="group" id="g-api">APIs and automation</h3>
-      <p class="group-sub">Backends and scripts that take repeat work off your plate.</p>
-      <div class="tools">
-        <article class="card tool">
-          <a class="shot" href="img/webgpu-agent-kit.webp" target="_blank" rel="noopener"><img src="img/webgpu-agent-kit-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="webgpu-agent-kit: Helps AI coding agents write working WebGPU code: ten live examples, a line-numbered WGSL checker, a CLI and an MCP server."></a>
-          <div class="body">
-            <h3>webgpu-agent-kit</h3>
-            <p>Helps AI coding agents write working WebGPU code: ten live examples, a line-numbered WGSL checker, a CLI and an MCP server.</p>
-            <p class="result"><span>Measured</span>10 of 10 examples render with no validation errors.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/webgpu-agent-kit">Repo</a><a href="https://chasebuilds.github.io/webgpu-agent-kit/">Live demo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/appointment-booking-api.webp" target="_blank" rel="noopener"><img src="img/appointment-booking-api-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="appointment-booking-api: Booking backend for a small business: staff hours, time off, no double-booking, time-zone-correct slots."></a>
-          <div class="body">
-            <h3>appointment-booking-api</h3>
-            <p>Booking backend for a small business: staff hours, time off, no double-booking, time-zone-correct slots.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/appointment-booking-api">Repo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/sheets-automations.webp" target="_blank" rel="noopener"><img src="img/sheets-automations-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="sheets-automations: Five Google Sheets automations: form cleanup, summary emails, invoice PDFs, overdue reminders, low-stock alerts."></a>
-          <div class="body">
-            <h3>sheets-automations</h3>
-            <p>Five Google Sheets automations: form cleanup, summary emails, invoice PDFs, overdue reminders, low-stock alerts.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/sheets-automations">Repo</a></div>
-          </div>
-        </article>
-        <article class="card tool">
-          <a class="shot" href="img/web-data-extractor.webp" target="_blank" rel="noopener"><img src="img/web-data-extractor-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="web-data-extractor: Public catalog pages to a checked spreadsheet, only where robots.txt allows."></a>
-          <div class="body">
-            <h3>web-data-extractor</h3>
-            <p>Public catalog pages to a checked spreadsheet, only where robots.txt allows.</p>
-            <p class="result"><span>Measured</span>360 of 360 field values correct on the test site.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/web-data-extractor">Repo</a><a href="https://github.com/chasebuilds/web-data-extractor/blob/main/BENCHMARK.md">BENCHMARK.md</a></div>
-          </div>
-        </article>
-      </div>
-
-      <h3 class="group" id="g-security">Security checkups</h3>
-      <p class="group-sub">Plain-English checkups of a website&#x27;s public setup, no hacking involved.</p>
-      <div class="tools">
-        <article class="card tool">
-          <a class="shot" href="img/site-security-check.webp" target="_blank" rel="noopener"><img src="img/site-security-check-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="site-security-check: A passive checkup of your own website, written up in plain English with a grade and fixes in order."></a>
-          <div class="body">
-            <h3>site-security-check</h3>
-            <p>A passive checkup of your own website, written up in plain English with a grade and fixes in order.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/site-security-check">Repo</a><a href="https://chasebuilds.github.io/site-security-check/">Live demo</a></div>
-          </div>
-        </article>
-      </div>
-
-      <h3 class="group" id="g-ai">AI with local models</h3>
-      <p class="group-sub">AI that runs on your own computer, so private files never leave it.</p>
-      <div class="tools">
-        <article class="card tool">
-          <a class="shot" href="img/pdf-qa-local.webp" target="_blank" rel="noopener"><img src="img/pdf-qa-local-sm.webp" width="720" height="450" loading="lazy" decoding="async" alt="pdf-qa-local: Ask questions about a folder of PDFs and get answers that cite the file and page. Runs on your own computer, so documents stay private."></a>
-          <div class="body">
-            <h3>pdf-qa-local</h3>
-            <p>Ask questions about a folder of PDFs and get answers that cite the file and page. Runs on your own computer, so documents stay private.</p>
-            <p class="result"><span>Measured</span>Right page cited on 29 of 30 test questions, 12 of 12 unanswerable questions refused.</p>
-            <div class="links"><a href="https://github.com/chasebuilds/pdf-qa-local">Repo</a></div>
-          </div>
-        </article>
-      </div>
     </section>
 
     <section class="stage glass" id="how">
@@ -492,6 +154,7 @@
       <p class="sub">For small businesses around Pikeville, Prestonsburg, Paintsville and Hazard. First jobs are priced low, and you only pay if you are happy with the result.</p>
       <ul class="local-offers">
         <li class="card"><b>Websites</b>A clean one-page site with your hours, services, phone and map. Free mockup first.<br><span class="price">$50 to launch</span></li>
+        <li class="card new"><b>3D window hero for your homepage</b>The page moves as visitors move. Camera is optional and runs on their device only; nothing is recorded or sent. An add-on to a website build.<br><span class="card-links"><a href="https://chasebuilds.github.io/window-hero/">See the demo</a><a href="https://calendly.com/chasebuilds-ky/30min" target="_blank" rel="noopener">Book a free call</a></span></li>
         <li class="card"><b>Spreadsheet cleanup</b>Customer lists, invoices or inventory: duplicates removed, formats fixed, every change listed.<br><span class="price">From $25</span></li>
         <li class="card"><b>PDFs to Excel</b>Bank statements, invoices or reports turned into rows and columns, totals checked.<br><span class="price">From $25</span></li>
         <li class="card"><b>Website security checkup</b>A passive check of your own site: HTTPS, certificate, security headers, exposed files. Plain-English report.<br><span class="price">$40</span></li>
@@ -531,5 +194,33 @@
 
   <footer class="glass">All results are on synthetic data. Chase Builds.</footer>
 </div>
+<script src="notebook-shelf-1.0.0.js"></script>
+<script>
+(() => {
+  const host = document.getElementById('shelf');
+  const src = document.getElementById('shelf-data');
+  const list = document.getElementById('all-projects');
+  if (!host || !src || !window.NotebookShelf) return;
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const showList = () => { list.open = true; list.scrollIntoView({ behavior: still ? 'auto' : 'smooth', block: 'start' }); };
+  window.__shelf = NotebookShelf.mount(host, JSON.parse(src.textContent), {
+    title: 'Pick a notebook',
+    unit: 'project',
+    noteLabel: 'Measured',
+    signoff: "that's this notebook. thanks for looking :)",
+    actions: [
+      { id: 'list', icon: 'list', label: 'Show every project as a list', onClick: showList },
+      { id: 'copy', icon: 'copy', label: 'Copy a link to this page', onClick: async (s) => {
+        try { await navigator.clipboard.writeText(location.href.split('#')[0]); s.toast('Link copied'); } catch (_) { s.toast('Copy blocked by the browser'); }
+      } },
+    ],
+  });
+  // The list stays open without JavaScript; with the shelf running it starts folded unless a group link was followed.
+  const sync = () => { if (location.hash.startsWith('#g-') || location.hash === '#all-projects') list.open = true; };
+  list.open = false;
+  sync();
+  addEventListener('hashchange', sync);
+})();
+</script>
 </body>
 </html>
