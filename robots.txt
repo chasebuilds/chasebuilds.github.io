@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://chasebuilds.github.io/sitemap.xml
